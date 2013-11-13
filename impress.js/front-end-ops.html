@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=1024" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+      
+      <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+      <meta name="author" content="Bartek Szopka" />
+
+      <link href="css/impress-demo.css" rel="stylesheet" />
+      
+      <link rel="shortcut icon" href="favicon.png" />
+      <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  </head>
+
+  <body class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress">
+
+      <div id="begin" class="step slide" data-x="-6000" data-y="3000">
+          <p>Hello, world</p>
+      </div>
+      <div id="slide2" class="step slide" data-x="-5000" data-y="3000">
+          <p>Hello, again</p>
+      </div>
+      <div id="slide3" class="step slide" data-x="-4000" data-y="3000">
+          <p>Third slide</p>
+      </div>
+      <div id="slide4" class="step" data-x="0" data-y="0" data-scale="10">
+      </div>
+      <div id="lets-begin" class="step" data-x="-4000" data-y="3000">
+      </div>
+      <div id="branch" class="step slide" data-x="-1750" data-y="3000"></div>
+      <div id="pre-commit" class="step slide" data-x="250" data-y="2500"></div>
+      <div id="pre-push" class="step slide" data-x="2250" data-y="2000"></div>
+      <div id="pre-merge" class="step slide" data-x="4250" data-y="1250"></div>
+      <div id="ci" class="step slide" data-x="6000" data-y="0" data-scale="1.5"></div>
+      <div id="deploy" class="step slide" data-x="6000" data-y="-1500"></div>
+      <div id="serve" class="step slide" data-x="6000" data-y="-3000" data-scale="2"></div>
+    </div>
+
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+  </body>
+</html>
