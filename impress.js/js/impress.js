@@ -558,6 +558,28 @@
             
             return goto(next);
         };
+
+        // `processKeyup` API function to hijack and then pass on a keyup event
+        var processKeyup = function(event){
+            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
+                switch( event.keyCode ) {
+                    case 33: // pg up
+                    case 37: // left
+                    case 38: // up
+                         prev();
+                         break;
+                    case 9:  // tab
+                    case 32: // space
+                    case 34: // pg down
+                    case 39: // right
+                    case 40: // down
+                         next();
+                         break;
+                }
+                
+                event.preventDefault();
+            }
+        };
         
         // Adding some useful classes to step elements.
         //
@@ -630,14 +652,15 @@
             init: init,
             goto: goto,
             next: next,
-            prev: prev
+            prev: prev,
+            processKeyup: processKeyup
         });
 
     };
     
     // flag that can be used in JS to check if browser have passed the support test
     impress.supported = impressSupported;
-    
+
 })(document, window);
 
 // NAVIGATION EVENTS
@@ -696,26 +719,9 @@
         //   positioning. I didn't want to just prevent this default action, so I used [tab]
         //   as another way to moving to next step... And yes, I know that for the sake of
         //   consistency I should add [shift+tab] as opposite action...
-        document.addEventListener("keyup", function ( event ) {
-            if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {
-                switch( event.keyCode ) {
-                    case 33: // pg up
-                    case 37: // left
-                    case 38: // up
-                             api.prev();
-                             break;
-                    case 9:  // tab
-                    case 32: // space
-                    case 34: // pg down
-                    case 39: // right
-                    case 40: // down
-                             api.next();
-                             break;
-                }
-                
-                event.preventDefault();
-            }
-        }, false);
+        // document.addEventListener("keyup", function ( event ) {
+        //     api.processKeyup(event);
+        // }, false);
         
         // delegated handler for clicking on the links to presentation steps
         document.addEventListener("click", function ( event ) {
