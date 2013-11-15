@@ -1,0 +1,23 @@
+.slide {
+  text-align: center;
+}
+.substep.is-active {
+  display: block;
+}
+.substep.is-active ~ .substep {
+  display: none;
+}
+
+.is-overview, .v-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.slide__title {
+  font-size: 100px;
+}
+
+.is-hidden {
+  display: none;
+}

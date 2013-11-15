@@ -10,6 +10,7 @@
       <meta name="author" content="Bartek Szopka" />
 
       <link href="css/impress-demo.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
       
       <link rel="shortcut icon" href="favicon.png" />
       <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -24,19 +25,27 @@
 
     <div id="impress">
 
-      <div id="begin" class="step slide" data-x="-6000" data-y="3000">
-          <p>Hello, world</p>
+      <div id="begin" class="step slide v-centered js-substeps" data-x="-6000" data-y="3000">
+          <h1 class="slide__title substep is-active js-substep js-title">Front End Ops</h1>
+          <div class="substep js-substep">
+            <p class="slide__item">Code quality</p>
+            <p class="slide__item">Deployment</p>
+            <p class="slide__item">Performance</p>
+            <p class="slide__item">Monitoring</p>
+        </div>
+        <div class="slide__link js-links is-hidden">
+          <a href="http://www.lonelyplanet.com/england/yorkshire">http://www.lonelyplanet.com/england/yorkshire</a>
+          <a href="http://codepen.io/Ianfeather/pen/Ccpem">http://codepen.io/Ianfeather/pen/Ccpem</a>
+        </div>
       </div>
-      <div id="slide2" class="step slide" data-x="-5000" data-y="3000">
-          <p>Hello, again</p>
+      <div id="slide2" class="step slide is-overview" data-x="-5000" data-y="3000">
+          <h1 class="slide__title substep is-active js-substep js-title">Front End Ops</h1>
       </div>
-      <div id="slide3" class="step slide" data-x="-4000" data-y="3000">
+      <div id="slide3" class="step slide is-overview" data-x="-4000" data-y="3000">
           <p>Third slide</p>
       </div>
-      <div id="slide4" class="step" data-x="0" data-y="0" data-scale="10">
-      </div>
-      <div id="lets-begin" class="step" data-x="-4000" data-y="3000">
-      </div>
+      <div id="overview" class="step" data-x="0" data-y="0" data-scale="10"></div>
+      <div id="upstream" class="step" data-x="2000" data-y="500" data-scale="8"></div>
       <div id="branch" class="step slide" data-x="-1750" data-y="3000"></div>
       <div id="pre-commit" class="step slide" data-x="250" data-y="2500"></div>
       <div id="pre-push" class="step slide" data-x="2250" data-y="2000"></div>
@@ -45,24 +54,15 @@
       <div id="deploy" class="step slide" data-x="6000" data-y="-1500"></div>
       <div id="serve" class="step slide" data-x="6000" data-y="-3000" data-scale="2"></div>
 
-
-      <div id="pause" class="step" data-x="0" data-y="0" data-scale="10"></div>
+      <div id="overview2" class="step" data-x="0" data-y="0" data-scale="10"></div>
       <img id="user" class="step" data-x="-4000" data-y="-3000" data-scale="1.5" data-rotate="90" src="http://content.hwigroup.net/images/products/xl/135791/apple_imac_mc812da.jpg"/>
     </div>
 
     <script src="js/impress.js"></script>
     <script>
       impress().init();
-      document.addEventListener("keyup", function ( event ) {
-        if (window.location.hash.match(/ci/)){
-          console.log('foo');
-        } else {
-          impress().processKeyup(event);
-        }
-      }, false);
-
-
     </script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>
