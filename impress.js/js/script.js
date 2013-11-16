@@ -7,14 +7,14 @@ var frontEndOps = (function(){
   },
 
   showLinks = function(slide) {
-    slide.querySelector('.js-links').classList.toggle('is-hidden')
+    slide.classList.toggle('showing-links');
   };
 
   shuffleActiveStep = function(slide) {
     var substeps = slide.querySelectorAll('.js-substep'),
         next = false;
-    
-    if (substeps[substeps.length -1].classList.contains('is-active')) {
+
+    if (substeps.length === 1) {
       return impress().processKeyup(event);
     }
 
@@ -22,6 +22,7 @@ var frontEndOps = (function(){
       if (substep.classList.contains('is-active')) {
         next = true;
         substep.classList.remove('is-active');
+        substep.classList.remove('js-substep');
       } else {
         if (next) {
           substep.classList.add('is-active');
