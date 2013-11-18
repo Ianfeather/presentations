@@ -8,39 +8,43 @@ var frontEndOps = (function(){
 
   showLinks = function(slide) {
     slide.classList.toggle('showing-links');
-  };
+  },
+
 
   shuffleActiveStep = function(slide) {
     var substeps = slide.querySelectorAll('.js-substep'),
-        next = false;
+        foundNext = false;
 
     if (substeps.length === 1) {
       return impress().processKeyup(event);
     }
 
     substeps.forEach(function(substep, index){
-      if (substep.classList.contains('is-active')) {
-        next = true;
+      if (substep.classList.contains('is-active') && !foundNext) {
         substep.classList.remove('is-active');
         substep.classList.remove('js-substep');
-      } else {
-        if (next) {
-          substep.classList.add('is-active');
-        }
+        substep.nextElementSibling.classList.add('is-active')
+        foundNext = true;
       }
     });
 
-  }
+  }, 
+  hiddenOverviewItems = 1;
 
   document.addEventListener("keyup", function ( event ) {
     var keyCode = event.keyCode || event.which || event.charCode,
-        $this = document.getElementById(location.hash.split(/#\//)[1]),
+        hash = location.hash.split(/#\//)[1],
+        $this = document.getElementById(hash),
         userHelpButton = 73; // i
 
     if (keyCode === userHelpButton) {
       showLinks($this)
     } else {
-      if (hasSubsteps($this)) {
+
+      if (hash == "overview-1" && hiddenOverviewItems < 4) {
+        document.body.classList.add('is-overview-' + hiddenOverviewItems);
+        hiddenOverviewItems++;
+      } else if (hasSubsteps($this)) {
         shuffleActiveStep($this);
       } else {
         // Just get on with the presentation
