@@ -37,7 +37,8 @@ img {
   max-width: 100%;
 }
 
-.slide__content {
+.slide__content,
+.user-panel__inner {
   height: 100%;
   width: 100%;
   padding: 40px 60px;
@@ -64,15 +65,26 @@ ul {
 .slide__title {
   font-size: 80px;
   color: #206FAC;
-  height: 100px;
-  line-height: 100px;
+  min-height: 100px;
+  line-height: 1.2em;
   letter-spacing: -0.02em;
   margin-bottom: 50px;
 }
 .slide__title.is-active {
   height: 100%;
   -webkit-transform: translateY(45%);
-  margin-top: -50px
+  margin-top: -50px;
+}
+
+.impress-on-overview-1 .slide__title {
+  font-size: 200px;
+  font-weight: bold;
+  margin-top: 0;
+  -webkit-transform: translateY(0%);
+}
+
+.impress-on-overview-1 .substep:not(.slide__title) {
+  display: none;
 }
 
 .slide__subtitle {

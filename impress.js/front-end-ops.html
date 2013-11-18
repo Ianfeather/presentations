@@ -24,7 +24,6 @@
     </div>
 
     <div id="impress">
-
       <div id="begin" class="step slide v-centered js-substeps" data-x="-6000" data-y="3000">
         <div class="slide__content">
           <h1 class="slide__title substep is-active js-substep">Front End Ops</h1>
@@ -35,13 +34,14 @@
           </div>
         </div>
         <div class="user-panel">
-          <p>I'd never heard the term 'Front End Ops' before the Alex Sexton article. To me it was still DevOps but it was saying, "Step up, this is no longer just the work of back end devs." As it shouldn't be, this stuff is fun.</p>
+          <div class="user-panel__inner">
+            <p>I'd never heard the term 'Front End Ops' before the Alex Sexton article. To me it was still DevOps but it was saying, "Step up, this is no longer just the work of back end devs." As it shouldn't be, this stuff is fun.</p>
 
-          <p>It was talking to <a href="https://twitter.com/OliverJAsh">Oliver Ash</a> that made me decide to do this talk. We discussed this Catch 22 situation around a lot of these topics: where it was very hard to actually learn them without being exposed to them (usually in large organisations) - and equally difficuly to get the role where you would be exposed to them, without the skills.</p>
+            <p>It was talking to <a href="https://twitter.com/OliverJAsh">Oliver Ash</a> that made me decide to do this talk. We discussed this Catch 22 situation around a lot of these topics: where it was very hard to actually learn them without being exposed to them (usually in large organisations) - and equally difficuly to get the role where you would be exposed to them, without the skills.</p>
 
-          <h4>Links:</h4>
-          <a class="link" href="http://www.smashingmagazine.com/2013/06/11/front-end-ops/">http://www.smashingmagazine.com/2013/06/11/front-end-ops/</a>
-          
+            <h4>Links:</h4>
+            <a class="link" href="http://www.smashingmagazine.com/2013/06/11/front-end-ops/">http://www.smashingmagazine.com/2013/06/11/front-end-ops/</a>
+          </div>
         </div>
       </div>
       <div id="key-concepts" class="step slide is-overview" data-x="-5000" data-y="3000">
@@ -126,7 +126,7 @@
       
       <div id="ci" class="step slide hidden--overview-1" data-x="6000" data-y="0" data-scale="1.5">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Continuous Integration</h1>
+          <h1 class="slide__title is-active substep js-substep">CI</h1>
           <div class="substep js-substep">
             <p>Sounds complex but actually very simple:</p>
             <ul>
@@ -140,6 +140,7 @@
           <p class="substep js-substep">Continous Integration vs Continuous Deployment vs Continuous Delivery vs Continuous Experimentation</p>
         </div>
       </div>
+
       <div id="deploy" class="step slide hidden--overview-1" data-x="6000" data-y="-1500">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Package &amp; Deploy</h1>
@@ -154,6 +155,7 @@
           </div>
         </div>
       </div>
+
       <div id="server" class="step slide" data-x="6000" data-y="-3000" data-scale="2">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Server</h1>
@@ -161,8 +163,22 @@
       </div>
 
       <div id="overview2" class="step" data-x="0" data-y="0" data-scale="10"></div>
-      <img id="user" class="step" data-x="-4000" data-y="-3000" data-scale="1.5" data-rotate="90" src="http://content.hwigroup.net/images/products/xl/135791/apple_imac_mc812da.jpg"/>
-      <div id="cdn" class="step slide hidden--overview-2" data-x="-2500" data-y="-3000"></div>
+
+
+      <div id="user" class="step slide" data-x="-4000" data-y="-3000" data-scale="1.5">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Browser</h1>
+        </div>
+      </div>
+
+      <div id="cdn" class="step slide hidden--overview-2" data-x="-2500" data-y="-3000">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">CDN</h1>
+        </div>
+      </div>
+
+
+
     </div>
 
     <script src="js/impress.js"></script>

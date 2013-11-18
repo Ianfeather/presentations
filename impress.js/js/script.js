@@ -43,10 +43,12 @@ var frontEndOps = (function(){
 
       if (hash == "overview-1" && hiddenOverviewItems < 4) {
         document.body.classList.add('is-overview-' + hiddenOverviewItems);
+        document.body.classList.remove('is-overview-' + (hiddenOverviewItems-1));
         hiddenOverviewItems++;
       } else if (hasSubsteps($this)) {
         shuffleActiveStep($this);
       } else {
+        document.body.classList.remove('is-overview-' + (hiddenOverviewItems-1));
         // Just get on with the presentation
         impress().processKeyup(event);
       }
