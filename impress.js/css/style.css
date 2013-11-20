@@ -67,7 +67,7 @@ ul {
   color: #206FAC;
   min-height: 100px;
   line-height: 1.2em;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   margin-bottom: 50px;
 }
 .slide__title.is-active {
@@ -75,20 +75,24 @@ ul {
   -webkit-transform: translateY(45%);
   margin-top: -50px;
 }
-
+/*
 .impress-on-overview-1 .slide__title {
   font-size: 200px;
   font-weight: bold;
   margin-top: 0;
   -webkit-transform: translateY(0%);
-}
+}*/
 
 .impress-on-overview-1 .substep:not(.slide__title) {
   display: none;
 }
 
+[class*="impress-on-overview"] .step {
+  opacity: 1;
+}
+
 .slide__subtitle {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
   color: #206FAC;
   text-transform: uppercase;
@@ -123,4 +127,25 @@ ul {
 .is-overview-2 .hidden--overview-2,
 .is-overview-3 .hidden--overview-3 {
   display: block;
+}
+
+.slide--server {
+  background: #508DBB;
+}
+.slide--server .slide__title {
+  color: #fff;
+}
+
+
+
+/* Showing and hiding tiers */
+
+body[class*="t1"] .step[id*="t2"],
+body[class*="t2"] .step[id*="t1"] {
+  opacity: 0;
+}
+
+body[class*="t1"] .step[id*="t1"],
+body[class*="t2"] .step[id*="t2"] {
+  opacity: 1;
 }

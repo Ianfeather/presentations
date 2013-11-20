@@ -24,7 +24,7 @@
     </div>
 
     <div id="impress">
-      <div id="begin" class="step slide v-centered js-substeps" data-x="-6000" data-y="3000">
+      <div id="t1-begin" class="step slide v-centered js-substeps" data-x="-4500" data-y="2250">
         <div class="slide__content">
           <h1 class="slide__title substep is-active js-substep">Front End Ops</h1>
           <blockquote class="substep js-substep">&ldquo;The metric by which a front-end operations engineer would be judged is speed.&rdquo; - Alex Sexton, Smashing Magazine</blockquote>
@@ -44,32 +44,38 @@
           </div>
         </div>
       </div>
-      <div id="key-concepts" class="step slide is-overview" data-x="-5000" data-y="3000">
+
+      <div id="t1-key-concepts" class="step slide is-overview" data-x="-3500" data-y="2250">
         <div class="slide__content">
           <h1 class="slide__title substep is-active js-substep">Key Concepts</h1>
+          
           <ul class="substep js-substep">
+            <h2 class="slide__subtitle">Your job (as a developer) is to:</h2>
             <li class="slide__item">Get the best code up to the server as fast as possible.</li>
             <li class="slide__item">Begin the User Experience as fast as possible.</li>
             <li class="slide__item">Enable fast feedback.</li>
           </ul>
-          <h2 class="substep js-substep slide__subtitle">How?</h2>
           <ul class="substep js-substep">
+            <h2 class="slide__subtitle">By finding ways to:</h2>
             <li class="slide__item">Offload as much as possibe</li>
             <li class="slide__item">Tighten the feedback loop</li>
           </ul>
         </div>
       </div>
-      <div id="editor" class="step" data-x="-4000" data-y="3000">
+
+      <div id="t1-editor" class="step" data-x="-2500" data-y="2250">
         <img src="images/html-css-js.png" />
       </div>
-      <div id="overview-1" class="step" data-x="0" data-y="0" data-scale="10"></div>
-      <div id="authoring-code" class="step slide hidden--overview-1" data-x="-1750" data-y="3000">
+
+      <div id="t1-overview-1" class="step" data-x="0" data-y="0" data-scale="7"></div>
+
+      <div id="t1-author-code" class="step slide hidden--overview-1" data-x="-1500" data-y="2250">
         <div class="slide__content">
-          <h1 class="slide__title substep is-active js-substep">Authoring code</h1>
+          <h1 class="slide__title substep is-active js-substep">Author code</h1>
           <p class="substep js-substep">Focus on offloading risk away from the developer.</p>
           <div class="substep js-substep">
             <ul>
-              <li>Create gateposts to maintain the codebase and protect the production environment from bugs &amp; regressions.</li>
+              <li>Create gateposts to protect the production environment.</li>
               <li>Ensure these gateposts work <em>for</em> the developer.</li>
             </ul>
           </div>
@@ -77,14 +83,14 @@
             <p>We need to manage the relationship between speed &amp; risk:</p>
             <ul>
               <li>Changing code on the server - fast but risky-as-hell.</li>
-              <li>Blocking deployment on synthetic performance testing - slow but safe.</li>
+              <li>Synthetic performance testing - slow but safe.</li>
             </ul>
           </div>
         </div>
       </div>
-      <div id="pre-commit" class="step slide hidden--overview-1" data-x="250" data-y="2500">
+      <div id="t1-commit" class="step slide hidden--overview-1" data-x="0" data-y="1900">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Pre-commit</h1>
+          <h1 class="slide__title is-active substep js-substep">Commit</h1>
           <div class="substep js-substep">
             <p>Our first Gatepost.</p>
             <p>An opportunity to run small, fast, composable tasks:</p>
@@ -98,9 +104,9 @@
           </div>
         </div>
       </div>
-      <div id="pre-push" class="step slide hidden--overview-1" data-x="2250" data-y="2000">
+      <div id="t1-push" class="step slide hidden--overview-1" data-x="1200" data-y="1500">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Pre-push</h1>
+          <h1 class="slide__title is-active substep js-substep">Push</h1>
           <div class="substep js-substep">
             <p>Our second Gatepost.</p>
             <p>An opportunity to run slightly longer tasks.</p>
@@ -110,9 +116,9 @@
         </div>
       </div>
 
-      <div id="pre-merge" class="step slide hidden--overview-1" data-x="4250" data-y="1250">
+      <div id="t1-merge" class="step slide hidden--overview-1" data-x="2400" data-y="1100">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Pre-merge</h1>
+          <h1 class="slide__title is-active substep js-substep">Merge</h1>
           <div class="substep js-substep">
             <p>Our third Gatepost.</p>
             <p>Ideally this is as simple as a Pull Request and Code Review.</p>
@@ -124,9 +130,9 @@
         </div>
       </div>
       
-      <div id="ci" class="step slide hidden--overview-1" data-x="6000" data-y="0" data-scale="1.5">
+      <div id="t1-ci" class="step slide hidden--overview-1" data-x="4250" data-y="250" data-scale="1.5">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">CI</h1>
+          <h1 class="slide__title is-active substep js-substep">Continuous Integration</h1>
           <div class="substep js-substep">
             <p>Sounds complex but actually very simple:</p>
             <ul>
@@ -141,7 +147,7 @@
         </div>
       </div>
 
-      <div id="deploy" class="step slide hidden--overview-1" data-x="6000" data-y="-1500">
+      <div id="t1-deploy" class="step slide hidden--overview-1" data-x="4250" data-y="-1000">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Package &amp; Deploy</h1>
           <p class="substep js-substep">Create downstream jobs that are run after a successful build:</p>
@@ -156,24 +162,18 @@
         </div>
       </div>
 
-      <div id="server" class="step slide" data-x="6000" data-y="-3000" data-scale="2">
+      <div id="t1-t2-server" class="step slide slide--server" data-x="4250" data-y="-2100" data-scale="1.5">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Server</h1>
         </div>
       </div>
 
-      <div id="overview2" class="step" data-x="0" data-y="0" data-scale="10"></div>
+      <div id="t1-overview-2" class="step" data-x="0" data-y="0" data-scale="7"></div>
+      <div id="t2-overview-2" class="step" data-x="0" data-y="-2100" data-scale="7"></div>
 
-
-      <div id="user" class="step slide" data-x="-4000" data-y="-3000" data-scale="1.5">
+      <div id="t2-user" class="step slide" data-x="-4000" data-y="-2100" data-scale="1.5">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Browser</h1>
-        </div>
-      </div>
-
-      <div id="cdn" class="step slide hidden--overview-2" data-x="-2500" data-y="-3000">
-        <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">CDN</h1>
         </div>
       </div>
 
