@@ -121,6 +121,9 @@ ul {
   background-color: red;
   top: 40%; }
 
+.slide__details {
+  transition: opacity 0.3s ease; }
+
 body[class*="t1"] .step[id*="t2"],
 body[class*="t2"] .step[id*="t1"] {
   opacity: 0; }
@@ -141,17 +144,177 @@ body[class*="-p_1"] .step[id*="-p_0"] {
 body[class*="-p_2"] .step[id*="-p_0"] {
   opacity: 1; }
 
+body[class*="-p_3"] .step[id*="-p_0"] {
+  opacity: 1; }
+
+body[class*="-p_4"] .step[id*="-p_0"] {
+  opacity: 1; }
+
 body[class*="-p_1"] .step[id*="-p_1"] {
   opacity: 1; }
 
 body[class*="-p_2"] .step[id*="-p_1"] {
   opacity: 1; }
 
+body[class*="-p_3"] .step[id*="-p_1"] {
+  opacity: 1; }
+
+body[class*="-p_4"] .step[id*="-p_1"] {
+  opacity: 1; }
+
 body[class*="-p_2"] .step[id*="-p_2"] {
+  opacity: 1; }
+
+body[class*="-p_3"] .step[id*="-p_2"] {
+  opacity: 1; }
+
+body[class*="-p_4"] .step[id*="-p_2"] {
+  opacity: 1; }
+
+body[class*="-p_3"] .step[id*="-p_3"] {
+  opacity: 1; }
+
+body[class*="-p_4"] .step[id*="-p_3"] {
+  opacity: 1; }
+
+body[class*="-p_4"] .step[id*="-p_4"] {
   opacity: 1; }
 
 body[class*="-p_1"] .step[id*="user"] {
   margin-left: -500px; }
+  body[class*="-p_1"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_1"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
 
-.impress-on-t2-overview-4-p_1 .step[id*="user"]:after {
-  content: none; }
+body[class*="-p_2"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_2"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_2"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_3"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_3"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_3"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_4"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_4"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_2"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_2"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_2"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_3"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_3"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_3"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_4"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_4"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_3"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_3"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_3"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_4"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_4"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="user"] {
+  margin-left: -500px; }
+  body[class*="-p_4"] .step[id*="user"]:after {
+    content: none; }
+  body[class*="-p_4"] .step[id*="user"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_2"] .step[id*="cdn"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_2"] .step[id*="cdn"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_3"] .step[id*="cdn"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_3"] .step[id*="cdn"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="cdn"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_4"] .step[id*="cdn"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_3"] .step[id*="cdn"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_3"] .step[id*="cdn"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="cdn"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_4"] .step[id*="cdn"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="cdn"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_4"] .step[id*="cdn"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_3"] .step[id*="nginx"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_3"] .step[id*="nginx"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_3"] .step[id*="server"] .slide__content {
+  display: none; }
+
+body[class*="-p_4"] .step[id*="nginx"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_4"] .step[id*="nginx"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="server"] .slide__content {
+  display: none; }
+
+body[class*="-p_4"] .step[id*="nginx"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_4"] .step[id*="nginx"] .substep:not(h1) {
+    display: none; }
+
+body[class*="-p_4"] .step[id*="server"] .slide__content {
+  display: none; }
+
+body[class*="-p_4"] .step[id*="unicorn"] {
+  width: 300px;
+  margin-left: -300px; }
+  body[class*="-p_4"] .step[id*="unicorn"] .substep:not(h1) {
+    display: none; }

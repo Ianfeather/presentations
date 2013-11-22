@@ -123,6 +123,9 @@ ul
   background-color: red
   top: 40%
 
+.slide__details
+  transition: opacity 0.3s ease
+
 // Show and hide main tiers
 
 body[class*="t1"] .step[id*="t2"],
@@ -139,19 +142,63 @@ body[class*="t2"] .step[id*="t2"]
 body[class*="t2"] .step[id*="-p_"]
   opacity: 0
 
+
+
+// Clever showing and hiding of the request tree
+
+$num_parts: 4
+
 // Show required parts of tier 2
 
-$num_parts: 2
 @for $part from 0 through $num_parts
   @for $i from $part through $num_parts
     body[class*="-p_#{$i}"] .step[id*="-p_#{$part}"]
       opacity: 1
 
 
-// Moving sections
+// The Browser Slide
 
-body[class*="-p_1"] .step[id*="user"]
-  margin-left: -500px
+@for $part from 1 through $num_parts
+  @for $i from $part through $num_parts
+    body[class*="-p_#{$i}"] .step[id*="user"]
+      margin-left: -500px
+      &:after
+        content: none
+      .substep:not(h1)
+        display: none
 
-.impress-on-t2-overview-4-p_1 .step[id*="user"]:after
-  content: none
+
+// The CDN Slide
+
+@for $part from 2 through $num_parts
+  @for $i from $part through $num_parts
+    body[class*="-p_#{$i}"] .step[id*="cdn"]
+      width: 300px
+      margin-left: -300px
+      .substep:not(h1)
+        display: none
+
+
+// The Nginx Slide
+
+@for $part from 3 through $num_parts
+  @for $i from $part through $num_parts
+    body[class*="-p_#{$i}"] .step[id*="nginx"]
+      width: 300px
+      margin-left: -300px
+      .substep:not(h1)
+        display: none
+    body[class*="-p_#{$i}"] .step[id*="server"]
+      .slide__content
+        display: none
+
+
+// The Unicorn Slide
+
+@for $part from 4 through $num_parts
+  @for $i from $part through $num_parts
+    body[class*="-p_#{$i}"] .step[id*="unicorn"]
+      width: 300px
+      margin-left: -300px
+      .substep:not(h1)
+        display: none
