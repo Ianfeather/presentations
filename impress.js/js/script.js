@@ -28,8 +28,7 @@ var frontEndOps = (function(){
       }
     });
 
-  }, 
-  hiddenOverviewItems = 1;
+  };
 
   document.addEventListener("keyup", function ( event ) {
     var keyCode = event.keyCode || event.which || event.charCode,
@@ -41,14 +40,9 @@ var frontEndOps = (function(){
       showLinks($this)
     } else {
 
-      if (hash == "overview-1" && hiddenOverviewItems < 4) {
-        document.body.classList.add('is-overview-' + hiddenOverviewItems);
-        document.body.classList.remove('is-overview-' + (hiddenOverviewItems-1));
-        hiddenOverviewItems++;
-      } else if (hasSubsteps($this)) {
+      if (hasSubsteps($this)) {
         shuffleActiveStep($this);
       } else {
-        document.body.classList.remove('is-overview-' + (hiddenOverviewItems-1));
         // Just get on with the presentation
         impress().processKeyup(event);
       }

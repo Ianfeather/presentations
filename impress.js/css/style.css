@@ -136,6 +136,26 @@ ul {
   color: #fff;
 }
 
+.has-dns {
+  position: relative;
+}
+.has-dns:after {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  border-radius: 300px;
+  left: 150%;
+  content: "DNS";
+  font-size: 75px;
+  padding-top: 75px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  display: block;
+  background-color: red;
+  top: 40%;
+}
 
 
 /* Showing and hiding tiers */
@@ -148,4 +168,14 @@ body[class*="t2"] .step[id*="t1"] {
 body[class*="t1"] .step[id*="t1"],
 body[class*="t2"] .step[id*="t2"] {
   opacity: 1;
+}
+
+
+/* Moving sections */
+
+body[class*="-p1"] .step[id*="user"] {
+  margin-left: -500px;
+}
+.impress-on-t2-overview-4-p1 .step[id*="user"]:after {
+  content: none;
 }
