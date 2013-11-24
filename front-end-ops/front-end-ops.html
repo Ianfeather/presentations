@@ -151,13 +151,13 @@
 
       <div id="t1-deploy" class="step slide hidden--overview-1" data-x="4250" data-y="-1000">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Package &amp; Deploy</h1>
+          <h1 class="slide__title is-active substep js-substep">Deployment</h1>
           <p class="substep js-substep">Create downstream jobs that are run after a successful build:</p>
           <div class="substep js-substep">
             <ul>
-              <li>Create a deployable package.</li>
-              <li>Push your assets to a cookie-less domain.</li>
-              <li>Push the package to the server.</li>
+              <li>Triggered on a successful CI build.</li>
+              <li>Deployment Strategies.</li>
+              <li>Deploy assets separately?</li>
               <li>Flush any caches that need it.</li>
             </ul>
           </div>
@@ -168,14 +168,19 @@
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Server</h1>
         </div>
+        <div class="slide--server slide--server--alt server--1"><h1 class="slide__title is-active substep js-substep">Server</h1></div>
+        <div class="slide--server slide--server--alt server--2"><h1 class="slide__title is-active substep js-substep">Server</h1></div>
+        <div class="slide--server slide--server--alt server--3"><h1 class="slide__title is-active substep js-substep">Server</h1></div>
+        <div class="slide--server slide--server--alt server--4"><h1 class="slide__title is-active substep js-substep">Server</h1></div>
       </div>
+      
 
       <div id="t1-overview-2" class="step" data-x="0" data-y="0" data-scale="7"></div>
       <div id="t2-overview-2-p_0" class="step" data-x="3000" data-y="-2100" data-scale="3"></div>
 
       <div id="t2-user-p_0" class="step slide has-dns" data-x="1500" data-y="-2100" data-scale="1">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Browser</h1>
+          <h1 class="slide__title is-active substep js-substep">Request</h1>
           <div class="substep js-substep">
             <p>All that stands between the user and the document:</p>
             <ul>
@@ -261,6 +266,77 @@
 
       <div id="t2-overview-8-p_4" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
 
+      <div id="t2-overview-8-p_5" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
+
+      <div id="t2-load-balancer-p_5" class="step slide has-dns" data-x="2400" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Load Balancer</h1>
+          <ul class="substep js-substep">
+            <li>Multiple servers == Multiple IPs.</li>
+            <li>The load balancer shares and directs traffic.</li>
+            <li>Protects struggling servers.</li>
+            <li>Auto-scaling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="t2-overview-9-p_5" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
+
+      <div id="t2-overview-9-p_6" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
+
+      <div id="t2-proxy-p_6" class="step slide has-dns" data-x="1800" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Reverse Proxy</h1>
+          <ul class="substep js-substep">
+            <li>F5, Nginx, Apache Traffic Server, "Dispatch".</li>
+            <li>Single entry point, cross application.</li>
+            <li>AB Testing.</li>
+            <li>Monitoring.</li>
+            <li>Security</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="t2-overview-9-p_6" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
+
+      <div id="t2-overview-9-p_7" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
+
+      <div id="t2-proxy-p_7" class="step slide" data-x="1800" data-y="-3100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">And there's more...</h1>
+          <ul class="substep js-substep">
+            <li>Multiple applications, multiple Availability Zones, Private Networks.</li>
+            <h2 class="slide__subtitle">But you don't need to know it all.</h2>
+            <li class="slide__item">Understand the theory and the bottlenecks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="t2-overview-9-p_7" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
+
+      <div id="t2-overview-9-p_8" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
+
+      <div id="t2-response-p_8" class="step slide" data-x="0" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Response</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Now we need to fetch our static assets:</h2>
+            <ul>
+              <li>Cookieless domain.</li>
+              <li>Cached indefinitely.</li>
+              <li>Versioned - sha1, or better, md5.</li>
+            </ul>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">And kick off client-side monitoring:</h2>
+            <ul>
+              <li>Performance Timing.</li>
+              <li>Javascript Errors.</li>
+              <li>Custom user events.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
 
     </div>

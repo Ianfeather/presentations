@@ -97,7 +97,8 @@ ul
 .showing-links .user-panel
   display: block
 
-.slide--server
+.slide--server,
+.slide--server--alt
   background: #508DBB
 
 .slide--server .slide__title
@@ -112,7 +113,7 @@ ul
   height: 200px
   box-sizing: border-box
   border-radius: 300px
-  left: 130%
+  left: 120%
   content: "DNS"
   font-size: 75px
   padding-top: 75px
@@ -142,11 +143,35 @@ body[class*="t2"] .step[id*="t2"]
 body[class*="t2"] .step[id*="-p_"]
   opacity: 0
 
+.slide--server--alt
+  opacity: 0
+  position: absolute
+  width: 48%
+  height: 48%
+  border-radius: 2%
+  .slide__title
+    font-size: 50px
+    margin-left: 50px
 
+.server--1
+  top: 0
+  left: 0
+
+.server--2
+  top: 0
+  right: 0
+
+.server--3
+  bottom: 0
+  left: 0
+
+.server--4
+  bottom: 0
+  right: 0
 
 // Clever showing and hiding of the request tree
 
-$num_parts: 4
+$num_parts: 8
 
 // Show required parts of tier 2
 
@@ -193,12 +218,41 @@ $num_parts: 4
         display: none
 
 
-// The Unicorn Slide
+// Splitting up the servers
 
 @for $part from 4 through $num_parts
   @for $i from $part through $num_parts
-    body[class*="-p_#{$i}"] .step[id*="unicorn"]
-      width: 300px
-      margin-left: -300px
-      .substep:not(h1)
-        display: none
+    body[class*="-p_#{$i}"] .step[id*="unicorn"],
+    body[class*="-p_#{$i}"] .step[id*="nginx"]
+      opacity: 0
+    body[class*="-p_#{$i}"] .step[id*="server"]
+      background: none
+      border: none
+      box-shadow: none
+    body[class*="-p_#{$i}"] .slide--server--alt
+      opacity: 1
+
+
+// Load Balancer
+
+@for $part from 5 through $num_parts
+  @for $i from $part through $num_parts
+    body[class*="-p_#{$i}"] .step[id*="user"]
+      margin-left: -800px
+    body[class*="-p_#{$i}"] .step[id*="cdn"]
+      margin-left: -600px
+
+
+// Load Balancer part 2
+
+@for $part from 6 through $num_parts
+  @for $i from $part through $num_parts
+    body[class*="-p_#{$i}"] .step[id*="load-balancer"]
+      width: 400px
+      margin-left: 550px
+    body[class*="-p_#{$i}"] .step[id*="user"]
+      margin-left: -1500px
+    body[class*="-p_#{$i}"] .step[id*="cdn"]
+      margin-left: -1300px
+
+
