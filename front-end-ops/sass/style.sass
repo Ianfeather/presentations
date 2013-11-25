@@ -130,17 +130,23 @@ ul
 // Show and hide main tiers
 
 body[class*="t1"] .step[id*="t2"],
-body[class*="t2"] .step[id*="t1"]
+body[class*="t1"] .step[id*="t3"],
+body[class*="t2"] .step[id*="t1"],
+body[class*="t2"] .step[id*="t3"]
   opacity: 0
 
 body[class*="t1"] .step[id*="t1"],
-body[class*="t2"] .step[id*="t2"]
+body[class*="t2"] .step[id*="t2"],
+body[class*="t3"] .step[id*="t2"],
+body[class*="t3"] .step[id*="t1"],
+body[class*="t3"] .step[id*="t3"]
   opacity: 1
 
 
-// Hide secondary parts of tier 2
+// Hide secondary parts of tier 2 and 3
 
-body[class*="t2"] .step[id*="-p_"]
+body[class*="t2"] .step[id*="-p_"],
+body[class*="t3"] .step[id*="-p_"]
   opacity: 0
 
 .slide--server--alt
@@ -171,13 +177,13 @@ body[class*="t2"] .step[id*="-p_"]
 
 // Clever showing and hiding of the request tree
 
-$num_parts: 8
+$num_parts: 11
 
 // Show required parts of tier 2
 
 @for $part from 0 through $num_parts
   @for $i from $part through $num_parts
-    body[class*="-p_#{$i}"] .step[id*="-p_#{$part}"]
+    body[class*="-p_#{$i}"] .step[id*="-p_#{$part}x"]
       opacity: 1
 
 
