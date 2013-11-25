@@ -24,13 +24,15 @@
     </div>
 
     <div id="impress">
-      <div id="t1-begin" class="step slide v-centered js-substeps" data-x="-4500" data-y="2250">
+      <div id="t0-begin" class="step slide v-centered js-substeps" data-x="0" data-y="5000">
         <div class="slide__content">
           <h1 class="slide__title substep is-active js-substep">Front End Ops</h1>
-          <blockquote class="substep js-substep">&ldquo;The metric by which a front-end operations engineer would be judged is speed.&rdquo; - Alex Sexton, Smashing Magazine</blockquote>
           <div class="substep js-substep">
             <p>This isn&apos;t about Grunt, Bower, Yeoman&hellip;</p>
             <p>It&apos;s a collection of concepts, rather than tools.</p>
+          </div>
+          <div class="substep js-substep">
+            <p>The operational side of your application is still part of the product.</p>
           </div>
         </div>
         <div class="user-panel">
@@ -45,11 +47,11 @@
         </div>
       </div>
 
-      <div id="t1-key-concepts" class="step slide is-overview" data-x="-3500" data-y="2250">
+      <div id="t0-key-concepts" class="step slide is-overview" data-x="0" data-y="3500">
         <div class="slide__content">
           <h1 class="slide__title substep is-active js-substep">Key Concepts</h1>
-          
           <ul class="substep js-substep">
+            <blockquote class="substep js-substep">&ldquo;The metric by which a front-end operations engineer would be judged is speed.&rdquo; - Alex Sexton, Smashing Magazine</blockquote>
             <h2 class="slide__subtitle">Your job (as a developer) is to:</h2>
             <li class="slide__item">Get the best code up to the server as fast as possible.</li>
             <li class="slide__item">Begin the User Experience as fast as possible.</li>
@@ -64,7 +66,21 @@
       </div>
 
 
-      <div id="t1-author-code" class="step slide hidden--overview-1" data-x="-2500" data-y="2250">
+      <div id="t0-editor" class="step" data-x="0" data-y="2200" data-scale="1.5">
+        <img src="images/html-css-js.png" />
+      </div>
+
+      
+
+      <div id="t0-overview-2" class="step" data-x="0" data-y="0" data-scale="7">
+        <h2 class="title--huge title--cd icon--arrow-right--after">Fast and Safe <br />Code Deployment</h2>
+        <h2 class="title--huge title--ux icon--arrow-right--before">Fast User Experience</h2>
+        <h2 class="title--huge title--feedback icon--arrow-right--after">Fast Feedback<br /> Loop</h2>
+      </div>
+
+      <div id="t1-overview-3" class="step" data-x="0" data-y="0" data-scale="7"></div>
+
+      <div id="t1-author-code" class="step slide hidden--overview-1" data-x="0" data-y="2100" data-scale="1.5">
         <div class="slide__content">
           <h1 class="slide__title substep is-active js-substep">Author code</h1>
           <p class="substep js-substep">Focus on offloading risk away from the developer.</p>
@@ -72,6 +88,7 @@
             <ul>
               <li>Create gateposts to protect the production environment.</li>
               <li>Ensure these gateposts work <em>for</em> the developer.</li>
+              <li>You want to be notified of a bug as early as possible.</li>
             </ul>
           </div>
           <div class="substep js-substep">
@@ -84,13 +101,7 @@
         </div>
       </div>
       
-      <div id="t1-editor" class="step" data-x="-1000" data-y="2250">
-        <img src="images/html-css-js.png" />
-      </div>
-
-      <div id="t1-overview-1" class="step" data-x="0" data-y="0" data-scale="7"></div>
-
-      <div id="t1-commit" class="step slide hidden--overview-1" data-x="500" data-y="1900">
+      <div id="t1-commit" class="step slide hidden--overview-1" data-x="1250" data-y="2100">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Commit</h1>
           <div class="substep js-substep">
@@ -106,7 +117,7 @@
           </div>
         </div>
       </div>
-      <div id="t1-push" class="step slide hidden--overview-1" data-x="1700" data-y="1500">
+      <div id="t1-push" class="step slide hidden--overview-1" data-x="1950" data-y="1300">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Push</h1>
           <div class="substep js-substep">
@@ -118,7 +129,7 @@
         </div>
       </div>
 
-      <div id="t1-merge" class="step slide hidden--overview-1" data-x="2900" data-y="1100">
+      <div id="t1-merge" class="step slide hidden--overview-1" data-x="2650" data-y="500">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Merge</h1>
           <div class="substep js-substep">
@@ -132,7 +143,7 @@
         </div>
       </div>
       
-      <div id="t1-ci" class="step slide hidden--overview-1" data-x="4250" data-y="250" data-scale="1.5">
+      <div id="t1-ci" class="step slide hidden--overview-1" data-x="3350" data-y="-300" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Continuous Integration</h1>
           <div class="substep js-substep">
@@ -149,7 +160,7 @@
         </div>
       </div>
 
-      <div id="t1-deploy" class="step slide hidden--overview-1" data-x="4250" data-y="-1000">
+      <div id="t1-deploy" class="step slide hidden--overview-1" data-x="4050" data-y="-1100">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Deployment</h1>
           <div class="substep js-substep">
@@ -167,43 +178,132 @@
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Server</h1>
         </div>
-        <div class="slide--server slide--server--alt server--1"><h1 class="slide__title is-active">Server</h1></div>
-        <div class="slide--server slide--server--alt server--2"><h1 class="slide__title is-active">Server</h1></div>
-        <div class="slide--server slide--server--alt server--3"><h1 class="slide__title is-active">Server</h1></div>
-        <div class="slide--server slide--server--alt server--4"><h1 class="slide__title is-active">Server</h1></div>
       </div>
       
 
       <div id="t1-overview-2" class="step" data-x="0" data-y="0" data-scale="7"></div>
-      <div id="t2-overview-2-p_0x" class="step" data-x="3000" data-y="-2100" data-scale="3"></div>
+      <div id="t2-overview-2" class="step" data-x="0" data-y="0" data-scale="7"></div>
 
-      <div id="t2-user-p_0x" class="step slide has-dns" data-x="1500" data-y="-2100" data-scale="1">
+      <div id="t2-enable-ux" class="step slide" data-x="2900" data-y="-2100">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Request</h1>
+          <h1 class="slide__title is-active substep js-substep">Enabling the UX</h1>
           <div class="substep js-substep">
-            <p>All that stands between the user and the document:</p>
+            <h2 class="slide__subtitle">You should know:</h2>
             <ul>
-              <li>A DNS lookup.</li>
-              <li>A <em>lot</em> of Network Variability.</li>
-              <li>The speed of your application.</li>
-              <li>The status of your application.</li>
+              <li>Which parts of the application to optimise.</li>
+              <li>How to protect the application - a broken UX is the slowest.</li>
             </ul>
           </div>
           <div class="substep js-substep">
-            <p>You should know how to:</p>
+            <h2 class="slide__subtitle">What separates the user and the experience:</h2>
             <ul>
-              <li>Identify opportunities to offload.</li>
-              <li>Protect your site.</li>
+              <li>DNS lookups.</li>
+              <li>A <em>lot</em> of Network Variability.</li>
+              <li>The speed &amp; stability of your application.</li>
+              <li>Assets on the Critical Path</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div id="t2-overview-3-p_0x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
+      <div id="t2-application" class="step slide" data-x="1500" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Application Level</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">What can we cache at this tier?</h2>
+            <ul>
+              <li>Database queries?</li>
+              <li>Page partials?</li>
+              <li>The entire page?</li>
+            </ul>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Application monitoring:</h2>
+            <ul>
+              <li>Database query timings.</li>
+              <li>Process timings.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="t2-load-balancer" class="step slide" data-x="0" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Load Balancer or Proxy</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Not always necessary, but an opportunity to:</h2>
+            <li>Protect struggling servers and distribute load.</li>
+            <li>Report to an auto-scaling mechanism.</li>
+            <li>Run Server Side AB Tests.</li>
+            <li>Handle security threats.</li>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">And Monitor unhealthy servers.</h2>
+            <p>Monitor and report on load Balancer latency.</p>
+            <p>Useful for alerting because it cuts out variability of the network.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="t2-cdn" class="step slide" data-x="-1500" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">CDN</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Store static files on edge nodes closer to the user.</h2>
+            <ul>
+              <li>The entire page.*</li>
+              <li>Static Assets.</li>
+              <li>The DNS lookup.</li>
+            </ul>
+            <p>* Caveats with page caching: Cookies, Auth, Localisation.</p>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Uh oh, now everything is cached&hellip;</h2>
+            <ul>
+              <li>Have cache busting mechanisms.</li>
+              <li>Expose what is cached, and where, to the team.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="t2-browser" class="step slide" data-x="-2900" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Browser</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Fetch static assets:</h2>
+            <ul>
+              <li>Use a Cookieless domain.</li>
+              <li>Cached indefinitely.</li>
+              <li>Versioned e.g. application-e8f29d9aae0aa79.css</li>
+              <li>Store them locally - Browser cache, LocalStorage&hellip;</li>
+            </ul>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">And kick off client-side monitoring:</h2>
+            <ul>
+              <li>RUM Timings.</li>
+              <li>Javascript Errors.</li>
+              <li>Custom user events.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="t2-user-p_0x" class="step slide slide--important" data-x="-4200" data-y="-2100" data-scale="1.5">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">User</h1>
+        </div>
+      </div>
+
+     <!--  <div id="t2-overview-3-p_0x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
 
       <div id="t2-overview-4-p_1x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
 
-      <div id="t2-cdn-p_1x" class="step slide has-dns" data-x="2000" data-y="-2100" data-scale="1">
+      <div id="t2-cdn-p_1x" class="step slide" data-x="2000" data-y="-2100" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">CDN</h1>
           <div class="substep js-substep">
@@ -262,7 +362,6 @@
             <ul>
               <li>Database query timings.</li>
               <li>Processing timings.</li>
-              <li>CPU, Memory Usage.</li>
             </ul>
           </div>
         </div>
@@ -274,7 +373,7 @@
 
       <div id="t2-overview-8-p_5x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
 
-      <div id="t2-load-balancer-p_5x" class="step slide has-dns" data-x="2400" data-y="-2100" data-scale="1">
+      <div id="t2-load-balancer-p_5x" class="step slide" data-x="2400" data-y="-2100" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Load Balancer</h1>
           <ul class="substep js-substep">
@@ -295,7 +394,7 @@
 
       <div id="t2-overview-9-p_6x" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
 
-      <div id="t2-proxy-p_6x" class="step slide has-dns" data-x="1800" data-y="-2100" data-scale="1">
+      <div id="t2-proxy-p_6x" class="step slide" data-x="1800" data-y="-2100" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Reverse Proxy</h1>
           <ul class="substep js-substep">
@@ -330,13 +429,13 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div id="t3-overview-1-p_8x" class="step" data-x="0" data-y="0" data-scale="7"></div>
+      <div id="t2-overview-1" class="step" data-x="0" data-y="0" data-scale="7"></div>
 
-      <div id="t3-overview-1-p_9x" class="step" data-x="0" data-y="0" data-scale="7"></div>
+      <div id="t3-overview-2" class="step" data-x="0" data-y="0" data-scale="7"></div>
 
-      <div id="t3-metrics-p_9x" class="step slide" data-x="-1000" data-y="-800" data-scale="1">
+      <div id="t3-metrics-p_9x" class="step slide" data-x="-4000" data-y="-1100" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Collect Metrics</h1>
           <ul class="substep js-substep">
@@ -350,46 +449,42 @@
         </div>
       </div>
 
-      <div id="t3-overview-2-p_9x" class="step" data-x="0" data-y="0" data-scale="7"></div>
-
-      <div id="t3-overview-2-p_10x" class="step" data-x="0" data-y="0" data-scale="7"></div>
-
-      <div id="t3-graphite-p_10x" class="step" data-x="-3000" data-y="0">
+<!--       <div id="t3-graphite-p_10x" class="step" data-x="-3000" data-y="0">
         <img src="images/graphite.png" />
       </div>
-
-      <div id="t3-datadog-p_10x" class="step" data-x="-2000" data-y="0">
+ -->
+      <div id="t3-datadog-p_10x" class="step" data-x="-3500" data-y="-300">
         <img src="images/datadog.png" />
       </div>
 
-      <div id="t3-kibana-p_10x" class="step" data-x="-1000" data-y="0">
+      <div id="t3-kibana-p_10x" class="step" data-x="-2800" data-y="500">
         <img src="images/kibana.png" />
       </div>
 
-      <div id="t3-speedcurve-p_10x" class="step" data-x="0" data-y="0">
+      <div id="t3-speedcurve-p_10x" class="step" data-x="-2100" data-y="1300">
         <img src="images/speedcurve.png" />
       </div>
-
+<!-- 
       <div id="t3-ab-test-p_10x" class="step" data-x="1000" data-y="0">
         <img src="images/ab-test.png" />
-      </div>
+      </div> -->
 
-      <div id="t3-overview-3-p_10x" class="step" data-x="0" data-y="0" data-scale="7"></div>
-
-      <div id="t3-overview-3-p_11x" class="step" data-x="0" data-y="0" data-scale="7"></div>
-
-      <div id="t3-feedback-p_11x" class="step slide" data-x="-1000" data-y="800" data-scale="1">
+      <div id="t3-feedback" class="step slide" data-x="-1300" data-y="2100" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Use the Feedback</h1>
           <div class="substep js-substep">
             <p>Let those metrics help you make your next piece of code, next feature, and ultimately the product, better.</p>
           </div>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">Thanks!</h2>
-            <ul>
-              <li>Any questions?</li>
-              <li>Ask away on twitter - <a href="http://www.twitter.com/ianfeather"</a>@ianfeather</a>
-            </ul>
+        </div>
+      </div>
+
+      <div id="t3-overview-3" class="step" data-x="0" data-y="0" data-scale="7"></div>
+
+      <div id="t4-thanks" class="step slide" data-x="0" data-y="0">
+        <div class="slide__content">
+          <h1 class="slide__title">Thanks!</h1>
+          <p>Any questions?</p>
+          <p>Or ask away on twitter - <a href="http://www.twitter.com/ianfeather"</a>@ianfeather</a></p>
         </div>
       </div>
 
