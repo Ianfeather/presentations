@@ -61,6 +61,8 @@ ul
   line-height: 1.2em
   letter-spacing: 0.02em
   margin-bottom: 50px
+  -webkit-transform: translateY(0%)
+  -webkit-transition: all ease 0.5s
 
 .slide__title.is-active
   height: 100%
@@ -126,6 +128,19 @@ ul
 
 .slide__details
   transition: opacity 0.3s ease
+
+// Transitions
+
+// Tier 2 slides transition on everything
+.step[id*="t2"]
+  transition: all 0.3s ease
+
+.step[id*="cdn"],
+.step[id*="load-balancer"]
+  transition-delay: 0.3s
+
+.step[id*="proxy"]
+  transition-delay: 0.8s
 
 // Show and hide main tiers
 
@@ -195,6 +210,10 @@ $num_parts: 11
       margin-left: -500px
       &:after
         content: none
+      .slide__title
+        height: 100%
+        -webkit-transform: translateY(45%)
+        margin-top: -50px
       .substep:not(h1)
         display: none
 
@@ -206,6 +225,10 @@ $num_parts: 11
     body[class*="-p_#{$i}"] .step[id*="cdn"]
       width: 300px
       margin-left: -300px
+      .slide__title
+        height: 100%
+        -webkit-transform: translateY(45%)
+        margin-top: -50px
       .substep:not(h1)
         display: none
 
@@ -217,6 +240,10 @@ $num_parts: 11
     body[class*="-p_#{$i}"] .step[id*="nginx"]
       width: 300px
       margin-left: -300px
+      .slide__title
+        height: 100%
+        -webkit-transform: translateY(45%)
+        margin-top: -50px
       .substep:not(h1)
         display: none
     body[class*="-p_#{$i}"] .step[id*="server"]
@@ -256,6 +283,12 @@ $num_parts: 11
     body[class*="-p_#{$i}"] .step[id*="load-balancer"]
       width: 400px
       margin-left: 550px
+      .slide__title
+        height: 100%
+        -webkit-transform: translateY(45%)
+        margin-top: -50px
+      .substep:not(h1)
+        display: none
     body[class*="-p_#{$i}"] .step[id*="user"]
       margin-left: -1500px
     body[class*="-p_#{$i}"] .step[id*="cdn"]
