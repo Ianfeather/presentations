@@ -13,13 +13,14 @@
 .icon--arrow-right,
 .icon--arrow-right--before:before,
 .icon--arrow-right--after:after {
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%3Csvg%20width%3D%2232px%22%20height%3D%22232px%22%20viewBox%3D%220%200%2032%20232%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20xmlns%3Asketch%3D%22http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%2Fns%22%3E%20%20%20%20%3Ctitle%3Earrow-right%3C%2Ftitle%3E%20%20%20%20%3Cdescription%3ECreated%20with%20Sketch%20(http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch)%3C%2Fdescription%3E%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%20%20%20%20%3Cg%20id%3D%22Functions%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20sketch%3Atype%3D%22MSPage%22%3E%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M27.791%2C175.250286%20L19.097%2C166.651124%20C18.152%2C165.718625%2016.621%2C165.718625%2015.681%2C166.651124%20C14.736%2C167.583623%2014.736%2C169.098563%2015.681%2C170.027106%20L20.201%2C174.498749%20L5.916%2C174.498749%20C4.584%2C174.498749%203.5%2C175.565733%203.5%2C176.887845%20C3.5%2C178.210945%204.584%2C179.27694%205.916%2C179.27694%20L20.33%2C179.27694%20L15.681%2C183.877136%20C14.736%2C184.80469%2014.736%2C186.321608%2015.681%2C187.253118%20C16.621%2C188.184627%2018.152%2C188.184627%2019.097%2C187.253118%20L27.791%2C178.654945%20C28.267%2C178.185234%2028.5%2C177.567194%2028.5%2C176.952121%20C28.5%2C176.338036%2028.267%2C175.720985%2027.791%2C175.250286%22%20id%3D%22arrow-right--lp-blue%22%20fill%3D%22%231D4F8D%22%20sketch%3Atype%3D%22MSShapeGroup%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M27.791%2C135.250286%20L19.097%2C126.651124%20C18.152%2C125.718625%2016.621%2C125.718625%2015.681%2C126.651124%20C14.736%2C127.583623%2014.736%2C129.098563%2015.681%2C130.027106%20L20.201%2C134.498749%20L5.916%2C134.498749%20C4.584%2C134.498749%203.5%2C135.565733%203.5%2C136.887845%20C3.5%2C138.210945%204.584%2C139.27694%205.916%2C139.27694%20L20.33%2C139.27694%20L15.681%2C143.877136%20C14.736%2C144.80469%2014.736%2C146.321608%2015.681%2C147.253118%20C16.621%2C148.184627%2018.152%2C148.184627%2019.097%2C147.253118%20L27.791%2C138.654945%20C28.267%2C138.185234%2028.5%2C137.567194%2028.5%2C136.952121%20C28.5%2C136.338036%2028.267%2C135.720985%2027.791%2C135.250286%22%20id%3D%22arrow-right--white%22%20fill%3D%22%23FFFFFF%22%20sketch%3Atype%3D%22MSShapeGroup%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M27.791%2C95.2502858%20L19.097%2C86.6511241%20C18.152%2C85.7186253%2016.621%2C85.7186253%2015.681%2C86.6511241%20C14.736%2C87.5836229%2014.736%2C89.0985626%2015.681%2C90.0271059%20L20.201%2C94.4987491%20L5.916%2C94.4987491%20C4.584%2C94.4987491%203.5%2C95.5657334%203.5%2C96.8878447%20C3.5%2C98.2109448%204.584%2C99.2769402%205.916%2C99.2769402%20L20.33%2C99.2769402%20L15.681%2C103.877136%20C14.736%2C104.80469%2014.736%2C106.321608%2015.681%2C107.253118%20C16.621%2C108.184627%2018.152%2C108.184627%2019.097%2C107.253118%20L27.791%2C98.6549447%20C28.267%2C98.1852343%2028.5%2C97.5671943%2028.5%2C96.9521208%20C28.5%2C96.3380363%2028.267%2C95.7209851%2027.791%2C95.2502858%22%20id%3D%22arrow-right--subdued-grey%22%20fill%3D%22%23E5EDF5%22%20sketch%3Atype%3D%22MSShapeGroup%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M27.791%2C55.2502858%20L19.097%2C46.6511241%20C18.152%2C45.7186253%2016.621%2C45.7186253%2015.681%2C46.6511241%20C14.736%2C47.5836229%2014.736%2C49.0985626%2015.681%2C50.0271059%20L20.201%2C54.4987491%20L5.916%2C54.4987491%20C4.584%2C54.4987491%203.5%2C55.5657334%203.5%2C56.8878447%20C3.5%2C58.2109448%204.584%2C59.2769402%205.916%2C59.2769402%20L20.33%2C59.2769402%20L15.681%2C63.8771357%20C14.736%2C64.8046902%2014.736%2C66.3216076%2015.681%2C67.2531176%20C16.621%2C68.1846275%2018.152%2C68.1846275%2019.097%2C67.2531176%20L27.791%2C58.6549447%20C28.267%2C58.1852343%2028.5%2C57.5671943%2028.5%2C56.9521208%20C28.5%2C56.3380363%2028.267%2C55.7209851%2027.791%2C55.2502858%22%20id%3D%22arrow-right--body-grey%22%20fill%3D%22%2367737B%22%20sketch%3Atype%3D%22MSShapeGroup%22%3E%3C%2Fpath%3E%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M27.791%2C15.2502858%20L19.097%2C6.65112409%20C18.152%2C5.7186253%2016.621%2C5.7186253%2015.681%2C6.65112409%20C14.736%2C7.58362289%2014.736%2C9.0985626%2015.681%2C10.0271059%20L20.201%2C14.4987491%20L5.916%2C14.4987491%20C4.584%2C14.4987491%203.5%2C15.5657334%203.5%2C16.8878447%20C3.5%2C18.2109448%204.584%2C19.2769402%205.916%2C19.2769402%20L20.33%2C19.2769402%20L15.681%2C23.8771357%20C14.736%2C24.8046902%2014.736%2C26.3216076%2015.681%2C27.2531176%20C16.621%2C28.1846275%2018.152%2C28.1846275%2019.097%2C27.2531176%20L27.791%2C18.6549447%20C28.267%2C18.1852343%2028.5%2C17.5671943%2028.5%2C16.9521208%20C28.5%2C16.3380363%2028.267%2C15.7209851%2027.791%2C15.2502858%22%20id%3D%22arrow-right--title-grey%22%20fill%3D%22%233A434E%22%20sketch%3Atype%3D%22MSShapeGroup%22%3E%3C%2Fpath%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2015.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2265px%22%20height%3D%2277.22px%22%20viewBox%3D%220%200%2065%2077.22%22%20style%3D%22enable-background%3Anew%200%200%2065%2077.22%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cpath%20style%3D%22fill%3A%23515A65%3B%22%20d%3D%22M65%2C44.72L35.834%2C73.886L32.5%2C77.22l-3.332-3.334L0%2C44.72l3.334-3.334L32.5%2C70.554l29.168-29.168%0D%0A%09L65%2C44.72z%22%2F%3E%0D%0A%3Crect%20x%3D%2229.969%22%20style%3D%22fill%3A%23515A65%3B%22%20width%3D%225.062%22%20height%3D%2272.918%22%2F%3E%0D%0A%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-size: cover; }
 
 body {
   font-family: freight;
-  color: #3b444f;
+  color: #233233;
+  background: #eef1f3;
   font-size: 30px;
   line-height: 1.3em;
   -webkit-font-smoothing: antialiased; }
@@ -111,11 +112,15 @@ ul {
 .slide--server,
 .slide--server--alt,
 .slide--important {
-  background: #508dbb; }
+  background: #508dbb;
+  text-align: center;
+  border-radius: 5%; }
   .slide--server .slide__title,
   .slide--server--alt .slide__title,
   .slide--important .slide__title {
-    color: white; }
+    color: white;
+    font-size: 200px;
+    margin-top: -80px; }
 
 #t0-overview-2 {
   width: 1000px;
@@ -124,21 +129,20 @@ ul {
 .title--huge {
   font-size: 50px;
   line-height: 1.1em;
-  position: absolute;
-  font-weight: bold; }
+  position: absolute; }
   .title--huge:after, .title--huge:before {
     content: "";
     display: block;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 85px;
     background-position: 0 80%; }
 
 .title--cd {
   top: 50%;
   right: 0; }
   .title--cd:after {
-    -webkit-transform: rotate(-50deg);
+    -webkit-transform: rotate(-140deg);
     bottom: 110%;
     right: 15%; }
   body[class*="t1"] .title--cd, body[class*="t2"] .title--cd, body[class*="t3"] .title--cd, body[class*="t4"] .title--cd {
@@ -149,7 +153,7 @@ ul {
   top: 0;
   line-height: 90px; }
   .title--ux:before {
-    -webkit-transform: rotate(180deg);
+    -webkit-transform: rotate(90deg);
     top: 0%;
     right: 110%; }
   body[class*="t2"] .title--ux, body[class*="t3"] .title--ux, body[class*="t4"] .title--ux {
@@ -159,7 +163,7 @@ ul {
   left: 0;
   top: 40%; }
   .title--feedback:after {
-    -webkit-transform: rotate(50deg);
+    -webkit-transform: rotate(-50deg);
     top: 80%;
     right: 15%; }
   body[class*="t3"] .title--feedback, body[class*="t4"] .title--feedback {
@@ -194,10 +198,3 @@ body[class*="t1-overview-3"] #t0-author-code,
 body[class*="author-code"] #t0-author-code,
 body[class*="thanks"] #t4-thanks {
   opacity: 1; }
-
-#t1-t2-server .slide__title,
-#t2-user-p_0x .slide__title {
-  font-size: 200px;
-  font-weight: bold;
-  margin-top: -80px;
-  -webkit-font-smoothing: subpixel-aliased; }
