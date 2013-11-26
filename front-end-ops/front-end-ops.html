@@ -33,6 +33,7 @@
           </div>
           <div class="substep js-substep">
             <p>The operational side of your application is still part of the product.</p>
+            <p>To build the best product you need to have an overview of the whole ecosystem.</p>
           </div>
         </div>
         <div class="user-panel">
@@ -299,137 +300,6 @@
         </div>
       </div>
 
-     <!--  <div id="t2-overview-3-p_0x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-overview-4-p_1x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-cdn-p_1x" class="step slide" data-x="2000" data-y="-2100" data-scale="1">
-        <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">CDN</h1>
-          <div class="substep js-substep">
-            <p>Our opportunity to cache:</p>
-            <ul>
-              <li>The DNS lookup.</li>
-              <li>Page partials.</li>
-              <li>The entire page.</li>
-            </ul>
-          </div>
-          <div class="substep js-substep">
-            <p>Caveats with page caching:</p>
-            <ul>
-              <li>Cookies.</li>
-              <li>Localisation.</li>
-              <li>Authentication.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-
-      <div id="t2-overview-5-p_1x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-overview-6-p_2x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-nginx-p_2x" class="step slide" data-x="4075" data-y="-2100" data-scale="1">
-        <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Nginx</h1>
-          <div class="substep js-substep">
-            <p>Lives in front of the server.</p>
-            <p>Another opportunity to offload:</p>
-            <ul>
-              <li>Database queries.</li>
-              <li>Page partials.</li>
-              <li>The entire page.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div id="t2-overview-7-p_2x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-overview-7-p_3x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-unicorn-p_3x" class="step slide" data-x="4425" data-y="-2100" data-scale="1">
-        <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">HTTP Server</h1>
-          <div class="substep js-substep">
-            <p>There are many types:</p>
-            <p>Tomcat, WEBRick node-http, Unicorn, Fugue, Puma.</p>
-            <p>Choose the one that best serves your type of application.</p>
-          </div>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">Application monitoring:</h2>
-            <ul>
-              <li>Database query timings.</li>
-              <li>Processing timings.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div id="t2-overview-8-p_3x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-overview-8-p_4x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-overview-8-p_5x" class="step" data-x="2600" data-y="-2100" data-scale="3.5"></div>
-
-      <div id="t2-load-balancer-p_5x" class="step slide" data-x="2400" data-y="-2100" data-scale="1">
-        <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Load Balancer</h1>
-          <ul class="substep js-substep">
-            <li>Multiple servers == Multiple IPs.</li>
-            <li>The load balancer shares and directs traffic.</li>
-            <li>Protects struggling servers.</li>
-            <li>Auto-scaling</li>
-          </ul>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">Monitor Load Balancer latency.</h2>
-            <p>The time taken for a load balancer to receive a response.</p>
-            <p>Useful for alerting because it cuts out variability.</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="t2-overview-9-p_5x" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
-
-      <div id="t2-overview-9-p_6x" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
-
-      <div id="t2-proxy-p_6x" class="step slide" data-x="1800" data-y="-2100" data-scale="1">
-        <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Reverse Proxy</h1>
-          <ul class="substep js-substep">
-            <li>F5, Nginx, Apache Traffic Server, "Dispatch".</li>
-            <li>Single entry point, cross application.</li>
-            <li>AB Testing.</li>
-            <li>Monitoring.</li>
-            <li>Security.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="t2-overview-9-p_6x" class="step" data-x="2200" data-y="-2100" data-scale="4"></div>
-
-      <div id="t2-response-p_8x" class="step slide" data-x="0" data-y="-2100" data-scale="1">
-        <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Response</h1>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">Now we need to fetch our static assets:</h2>
-            <ul>
-              <li>Cookieless domain.</li>
-              <li>Cached indefinitely.</li>
-              <li>Versioned - sha1, or better, md5.</li>
-            </ul>
-          </div>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">And kick off client-side monitoring:</h2>
-            <ul>
-              <li>RUM Timings.</li>
-              <li>Javascript Errors.</li>
-              <li>Custom user events.</li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
 
       <div id="t2-overview-1" class="step" data-x="0" data-y="0" data-scale="7"></div>
 
@@ -449,10 +319,6 @@
         </div>
       </div>
 
-<!--       <div id="t3-graphite-p_10x" class="step" data-x="-3000" data-y="0">
-        <img src="images/graphite.png" />
-      </div>
- -->
       <div id="t3-datadog-p_10x" class="step" data-x="-3500" data-y="-300">
         <img src="images/datadog.png" />
       </div>
@@ -464,10 +330,6 @@
       <div id="t3-speedcurve-p_10x" class="step" data-x="-2100" data-y="1300">
         <img src="images/speedcurve.png" />
       </div>
-<!-- 
-      <div id="t3-ab-test-p_10x" class="step" data-x="1000" data-y="0">
-        <img src="images/ab-test.png" />
-      </div> -->
 
       <div id="t3-feedback" class="step slide" data-x="-1300" data-y="2100" data-scale="1">
         <div class="slide__content">
