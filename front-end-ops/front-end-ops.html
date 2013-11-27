@@ -40,8 +40,6 @@
 
             <p>Importantly for me, the operational side of your application is still part of the product. If we want to build the best product we can, we need to be responsible for putting your own code into production and understand how it runs there.</p>
 
-            <h4>Links:</h4>
-
           </div>
         </div>
       </div>
@@ -51,6 +49,14 @@
           <img src="images/dev.jpg" />
           <figcaption class="drawing__caption">No more throwing code over the wall.</figcaption>
         </figure>
+
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p>Front end developers are probably the worst culprits of throwing code over the wall. The mentality of, &ldquo;I pushed it, now it&apos;s an Ops problem&rdquo; is becoming a dated paradigm, one which has so many drawbacks.</p>
+            <p>As front end developers we should be levelling up and taking ownership of our code working correctly locally and in production, as well as understanding all the variables that sit between our code and the user.</p>
+            <p>Plus you don&apos;t have to wait around for the ops guy any more&hellip; ;)</p>
+          </div>
+        </div>
       </div>
 
 
@@ -73,8 +79,8 @@
 
             <p>By enabling the three quick processes and constantly finding ways to reduce the latency of the feeback loop, we are creating a better product.</p>
 
+            <p>And it&apos;s not complicated to understand. There are two key principles which will work together to create a successful product lifecycle:</p>
             <ul>
-              <h2 class="slide__subtitle">This can be accomplished by finding ways to:</h2>
               <li class="slide__item">Offload as much as possibe</li>
               <li class="slide__item">Tighten the feedback loop</li>
             </ul>
@@ -113,11 +119,10 @@
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
-            <p>Use automated and composable tools to:</p>
-            <li>Ensure these gateposts <strong>actually help</strong> the developer.</li>
-            <p>After each gatepost the developer is receiving feedback which ultimately has to make their code better. Watching your files with JSHint is an example of immediate feedback, with longer proesses we need to create more structured gateposts.</p>
-            <p>The real challenge here is to get developer investment in the process. Each developer is protective of their development environment and you are introducing unknows as you add gateposts.</p>
-            <p>There has to be developer agreement. Even then you need to invest time to maintain the checks and keep them fast otherwise developers will find a way to bypass them.</p>
+            <p>We need to enable quick and early feedback for each developer in order to ultimately make their code better. Having your files watched by JSHint is an example of immediate feedback, but with longer proesses we need to create more structured gateposts.</p>
+            
+            <p>The real challenge here is to get developer investment in the process. Each developer is protective of their development environment and by integrating this process you are introducing unknows. You need to invest time to maintain the checks and keep them fast otherwise developers will find a way to bypass them.</p>
+
             <p>We need to manage the relationship between speed &amp; risk:</p>
             <ul>
               <li>Changing code on the server - fast but risky-as-hell.</li>
@@ -142,10 +147,20 @@
         <div class="user-panel">
           <div class="user-panel__inner">
             <h4>Links:</h4>
-            Ariya's composable tools blog
-            Plato
-            Istanbul
-            Dave's remove local gemfile references gist
+            <ul>
+              <li>
+                <a href="http://git-scm.com/book/en/Customizing-Git-Git-Hooks">Customizing Git Hooks</a>
+              </li>
+              <li>
+                <a href="http://ariya.ofilabs.com/2013/06/javascript-source-transformation-non-destructive-vs-regenerative.html">Javascript Source Transformation - Ariya Hidayat</a>
+              </li>
+              <li>
+                <a href="http://ariya.ofilabs.com/2013/04/automagic-removal-of-javascript-logging.html">Remove console.logs - Ariya Hidayat</a>
+              </li>
+              <li>
+                <a href="https://gist.github.com/textgoeshere/5956134">Remove local Gemfile references - Dave Nolan</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -156,15 +171,37 @@
           <ul class="substep js-substep">
             <li>Unit tests.</li>
             <li>Visual Regression tests.</li>
-            <li>Code coverage and complexity analysis.</li>
+            <li>Code coverage, quality and complexity analysis.</li>
           </ul>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
-            <p>Errors discovered at this point are already committed but can be removed by rebasing.</p>
-            <h4>Links:</h4>
-            PhantomCss, Wraith, Instagram-one
-
+            <p>In an ideal world we would run these tasks sooner, as the errors discovered at this point have already been committed. Unfortunately, anything longer than a couple of seconds will get in the way of developers at a commit level.</p>
+            <p>Errors discovered here can still be fixed and removed by rebasing.</p>
+            <h4>Visual Regression</h4>
+            <ul>
+              <li>
+                <a href="https://github.com/Huddle/PhantomCSS">PhantomCSS</a>
+              </li>
+              <li>
+                <a href="https://github.com/BBC-News/wraith">BBCNews/Wraith</a>
+              </li>
+              <li>
+                <a href="https://github.com/facebook/huxley">Facebook/Huxley</a>
+              </li>
+            </ul>
+            <h4>Code Complexity, Quality and Coverage</h4>
+            <ul>
+              <li>
+                <a href="https://github.com/es-analysis/plato">Plato</a>
+              </li>
+              <li>
+                <a href="https://www.sidekickjs.com/">SidekickJS</a>
+              </li>
+              <li>
+                <a href="https://github.com/gotwarlost/istanbul">Istanbul</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -181,7 +218,18 @@
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
-            <p>Should happen organically throughout the coding of the feature.</p>
+            <h4>Code Review</h4>
+            <p>Ideally this should happen organically throughout the coding of the feature rather than simply being reviewed at this point.</p>
+            <p>If we catch entire implementation flaws at this point we have wasted time. Solutions should be discussed with peers early so that this step can simply be a human check to ensure we aren't committing anything sloppy or accidental.</p>
+            <h4>Links</h4>
+            <ul>
+              <li>
+                <a href="http://bjk5.com/post/3994859683/code-reviews-as-relationship-builders-a-few-tips">Code Reviews as relationship builders - A few tips</a>
+              </li>
+              <li>
+                <a href="http://www.techrepublic.com/article/developers-guide-to-peer-reviews/">Developer's guide to peer reviews</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -202,7 +250,24 @@
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
-            <p>Integration <em>needs</em> to be fast!</p>
+            <p>Integration <em>needs</em> to be fast! In a large organisation this is a congested environment and usually the biggest bottleneck in releasing code.</p>
+            <p>Maintaining the CI environment requires a decent amount of care - speeding up tests, removing redundant tests, maintaining dependencies and keeping it in line with a production environment.</p>
+            <p>If you can, use a code-as-infrastructure tool like <a href="http://www.opscode.com/chef/">Chef</a> or <a href="http://puppetlabs.com/">Puppet</a> to maintain CI in line with production.</p>
+            <h4>Links</h4>
+            <ul>
+              <li>
+                <a href="http://jenkins-ci.org/">Jenkins</a>
+              </li>
+              <li>
+                <a href="http://www.jetbrains.com/teamcity/">TeamCity</a>
+              </li>
+              <li>
+                <a href="https://travis-ci.org/">Travis CI</a>
+              </li>
+              <li>
+                <a href="http://puppetlabs.com/blog/continuous-delivery-vs-continuous-deployment-whats-diff">Continuous Delivery Vs. Continuous Deployment: What's the Diff?</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -217,6 +282,13 @@
             <li>Deploy assets to a different server?</li>
             <li>Don&apos;t forget to flush any edge caches that require it.</li>
           </ul>
+        </div>
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p>We package and deploy our application using <a href="http://www.capistranorb.com/">Capistrano</a>. We push all our assets to <a href="https://aws.amazon.com/s3/">S3</a> and then cache them at the edge using <a href="http://www.fastly.com/">Fastly</a>.</p>
+            <h4>Links</h4>
+            <a href="http://css-tricks.com/deployment/">A <em>great</em> round up of deployment strategies from Chris Coyier</a>
+          </div>
         </div>
       </div>
 
