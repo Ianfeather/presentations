@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=1024" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+      
+      <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+      <meta name="author" content="Bartek Szopka" />
+
+      <link href="css/impress-demo.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
+      
+      <link rel="shortcut icon" href="favicon.png" />
+      <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+      <script src="js/socket.io.js"></script>
+      <script src="js/remote.js"></script>
+  </head>
+
+  <body class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <div id="impress">
+
+      <div id="t0-begin" class="step slide v-centered js-substeps" data-x="0" data-y="7000">
+        <div class="slide__content">
+          <h1 class="slide__title substep is-active js-substep">Front End Ops</h1>
+          <div class="substep js-substep">
+            <p>This isn&apos;t about Grunt, Bower, Yeoman&hellip;</p>
+            <p>It&apos;s a collection of concepts, rather than tools.</p>
+          </div>
+        </div>
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p>I'd never heard the term &lsquo;Front End Ops&rsquo; before the Alex Sexton article. To me it was still DevOps but it was saying, "Step up, this is no longer just the work of back end devs." As it shouldn't be, this stuff is fun.</p>
+
+            <p>It was talking to <a href="https://twitter.com/OliverJAsh">Oliver Ash</a> that made me decide to do this talk. We discussed this Catch 22 situation around a lot of these topics: where it was very hard to actually learn them without being exposed to them (usually in large organisations) - and equally difficuly to get the role where you would be exposed to them, without the skills.</p>
+
+            <h4>Links:</h4>
+            <a class="link" href="http://www.smashingmagazine.com/2013/06/11/front-end-ops/">http://www.smashingmagazine.com/2013/06/11/front-end-ops/</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="t0-over-the-wall" class="step" data-x="0" data-y="5000">
+        <div class="slide__content">
+          <img src="images/dev.jpg" />
+        </div>
+      </div>
+
+
+      <div id="t0-key-concepts" class="step slide is-overview" data-x="0" data-y="3500">
+        <div class="slide__content">
+          <h1 class="slide__title substep is-active js-substep">Key Concepts</h1>
+          
+          <ul class="substep js-substep">
+            <blockquote><strong>&ldquo;The metric by which a front-end operations engineer would be judged is <em>speed</em>.&rdquo; - Alex Sexton, Smashing Magazine</strong></blockquote>
+            <h2 class="slide__subtitle">Your job (as a developer) is to:</h2>
+            <li class="slide__item">Get the best code up to the server as fast as possible.</li>
+            <li class="slide__item">Begin the User Experience as fast as possible.</li>
+            <li class="slide__item">Enable fast feedback.</li>
+          </ul>
+
+          <ul class="substep js-substep">
+            <h2 class="slide__subtitle">By finding ways to:</h2>
+            <li class="slide__item">Offload as much as possibe</li>
+            <li class="slide__item">Tighten the feedback loop</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div id="t0-editor" class="step" data-x="0" data-y="2200" data-scale="1.5">
+        <img src="images/html-css-js.png" />
+      </div>
+
+      
+
+      <div id="t0-overview-2" class="step" data-x="0" data-y="0" data-scale="7">
+        <h2 class="title--huge title--cd icon--arrow-right--after">Fast and Safe <br />Code Deployment</h2>
+        <h2 class="title--huge title--ux icon--arrow-right--before">Fast User Experience</h2>
+        <h2 class="title--huge title--feedback icon--arrow-right--after">Fast Feedback<br /> Loop</h2>
+      </div>
+
+      <div id="t1-overview-3" class="step" data-x="0" data-y="0" data-scale="7"></div>
+
+      <div id="t1-author-code" class="step slide hidden--overview-1" data-x="0" data-y="2100" data-scale="1.5">
+        <div class="slide__content">
+          <h1 class="slide__title substep is-active js-substep">Author code</h1>
+          <p class="substep js-substep">Focus on offloading risk away from the developer.</p>
+          <div class="substep js-substep">
+            <ul>
+              <li>Create gateposts to protect the production environment.</li>
+              <li>Ensure these gateposts work <em>for</em> the developer.</li>
+              <li>You want to be notified of a bug as early as possible.</li>
+            </ul>
+          </div>
+          <div class="substep js-substep">
+            <p>We need to manage the relationship between speed &amp; risk:</p>
+            <ul>
+              <li>Changing code on the server - fast but risky-as-hell.</li>
+              <li>Synthetic performance testing - slow but safe.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div id="t1-commit" class="step slide hidden--overview-1" data-x="1250" data-y="2100">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Commit</h1>
+          <div class="substep js-substep">
+            <p>Our first Gatepost.</p>
+            <p>An opportunity to run small, fast, composable tasks:</p>
+          </div>
+          <div class="substep js-substep">
+            <ul>
+              <li>Remove console.logs, debuggers, local gem refs etc.</li>
+              <li>Styleguide compliance.</li>
+              <li>Code coverage, complexity.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="t1-push" class="step slide hidden--overview-1" data-x="1950" data-y="1300">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Push</h1>
+          <div class="substep js-substep">
+            <p>Our second Gatepost.</p>
+            <p>An opportunity to run slightly longer tasks.</p>
+            <p>Errors discovered here are already committed.</p>
+          </div>
+          <p class="substep js-substep">Example: Visual Regression tooling.</p>
+        </div>
+      </div>
+
+      <div id="t1-merge" class="step slide hidden--overview-1" data-x="2650" data-y="500">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Merge</h1>
+          <div class="substep js-substep">
+            <p>Our third Gatepost.</p>
+            <p>Ideally this is as simple as a Pull Request and Code Review.</p>
+          </div>
+          <div class="substep js-substep">
+            <p>This <em>should</em> be fast, because Code Review should have been happening organically throughout the feature.</p>
+            <p>Even so, this is not typically an area where we are concerned about speed.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="t1-ci" class="step slide hidden--overview-1" data-x="3350" data-y="-300" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Continuous Integration</h1>
+          <div class="substep js-substep">
+            <p>Sounds complex but actually very simple:</p>
+            <ul>
+              <li>A task runner (simple shell scripts).</li>
+              <li>A near-production environment.</li>
+              <li>A centralised location.</li>
+              <li>A hook to trigger tasks.</li>
+            </ul>
+          </div>
+          <p class="substep js-substep">Integration <em>needs</em> to be fast!</p>
+          <p class="substep js-substep">Continous Integration vs Continuous Deployment vs Continuous Delivery vs Continuous Experimentation</p>
+        </div>
+      </div>
+
+      <div id="t1-deploy" class="step slide hidden--overview-1" data-x="4050" data-y="-1100">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Deployment</h1>
+          <div class="substep js-substep">
+            <ul>
+              <li>Triggered on a successful CI build.</li>
+              <li>Choose your deployment strategy.</li>
+              <li>Deploy assets separately?</li>
+              <li>Flush any caches that need it.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="t1-t2-server" class="step slide slide--server" data-x="4250" data-y="-2100" data-scale="1.5">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Server</h1>
+        </div>
+      </div>
+      
+
+      <div id="t1-overview-2" class="step" data-x="0" data-y="0" data-scale="7"></div>
+      <div id="t2-overview-2" class="step" data-x="0" data-y="0" data-scale="7"></div>
+
+      <div id="t2-enable-ux" class="step slide" data-x="2900" data-y="-2100">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Enabling the UX</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">You should know:</h2>
+            <ul>
+              <li>Which parts of the application to optimise.</li>
+              <li>How to protect the application - a broken UX is the slowest.</li>
+            </ul>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">What separates the user and the experience:</h2>
+            <ul>
+              <li>DNS lookups.</li>
+              <li>A <em>lot</em> of Network Variability.</li>
+              <li>The speed &amp; stability of your application.</li>
+              <li>Assets on the Critical Path</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="t2-application" class="step slide" data-x="1500" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Application Level</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">What can we cache at this tier?</h2>
+            <ul>
+              <li>Database queries?</li>
+              <li>Page partials?</li>
+              <li>The entire page?</li>
+            </ul>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Application monitoring:</h2>
+            <ul>
+              <li>Database query timings.</li>
+              <li>Process timings.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="t2-load-balancer" class="step slide" data-x="0" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Load Balancer or Proxy</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Not always necessary, but an opportunity to:</h2>
+            <li>Protect struggling servers and distribute load.</li>
+            <li>Report to an auto-scaling mechanism.</li>
+            <li>Run Server Side AB Tests.</li>
+            <li>Handle security threats.</li>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">And Monitor unhealthy servers.</h2>
+            <p>Monitor and report on load Balancer latency.</p>
+            <p>Useful for alerting because it cuts out variability of the network.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="t2-cdn" class="step slide" data-x="-1500" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">CDN</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Store static files on edge nodes closer to the user.</h2>
+            <ul>
+              <li>The entire page.*</li>
+              <li>Static Assets.</li>
+              <li>The DNS lookup.</li>
+            </ul>
+            <p>* Caveats with page caching: Cookies, Auth, Localisation.</p>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Uh oh, now everything is cached&hellip;</h2>
+            <ul>
+              <li>Have cache busting mechanisms.</li>
+              <li>Expose what is cached, and where, to the team.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="t2-browser" class="step slide" data-x="-2900" data-y="-2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Browser</h1>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">Fetch static assets:</h2>
+            <ul>
+              <li>Use a Cookieless domain.</li>
+              <li>Cached indefinitely.</li>
+              <li>Versioned e.g. application-e8f29d9aae0aa79.css</li>
+              <li>Store them locally - Browser cache, LocalStorage&hellip;</li>
+            </ul>
+          </div>
+          <div class="substep js-substep">
+            <h2 class="slide__subtitle">And kick off client-side monitoring:</h2>
+            <ul>
+              <li>RUM Timings.</li>
+              <li>Javascript Errors.</li>
+              <li>Custom user events.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="t2-user-p_0x" class="step slide slide--important" data-x="-4200" data-y="-2100" data-scale="1.5">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">User</h1>
+        </div>
+      </div>
+
+
+      <div id="t2-overview-1" class="step" data-x="0" data-y="0" data-scale="7"></div>
+
+      <div id="t3-overview-2" class="step" data-x="0" data-y="0" data-scale="7"></div>
+
+      <div id="t3-metrics-p_9x" class="step slide" data-x="-4000" data-y="-1100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Collect Metrics</h1>
+          <ul class="substep js-substep">
+            <li>Measure everything - expose metrics that matter.</li>
+            <li>Collect metrics using tools like statsD, Logstash or even a 1x1.</li>
+            <li>Visualise them - Graphite, DataDog, Kibana.</li>
+            <li>Figure out what they mean!</li>
+            <li>Alert on them.</li>
+          </ul>
+          <h2 class="substep js-substep slide__subtitle">Most importantly, expose them to your team&hellip;</h2>
+        </div>
+      </div>
+
+      <div id="t3-datadog-p_10x" class="step" data-x="-3500" data-y="-300">
+        <img src="images/datadog.png" />
+      </div>
+
+      <div id="t3-kibana-p_10x" class="step" data-x="-2800" data-y="500">
+        <img src="images/kibana.png" />
+      </div>
+
+      <div id="t3-speedcurve-p_10x" class="step" data-x="-2100" data-y="1300">
+        <img src="images/speedcurve.png" />
+      </div>
+
+      <div id="t3-feedback" class="step slide" data-x="-1300" data-y="2100" data-scale="1">
+        <div class="slide__content">
+          <h1 class="slide__title is-active substep js-substep">Use the Feedback</h1>
+          <div class="substep js-substep">
+            <p>Let those metrics help you make your next piece of code, next feature, and ultimately the product, better.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="t3-overview-3" class="step" data-x="0" data-y="0" data-scale="7"></div>
+
+      <div id="t4-thanks" class="step slide" data-x="0" data-y="0">
+        <div class="slide__content">
+          <h1 class="slide__title">Thanks!</h1>
+          <p>Any questions?</p>
+          <p>Or ask away on twitter - <a href="http://www.twitter.com/ianfeather"</a>@ianfeather</a></p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <script src="js/impress.js"></script>
+    <script>
+      impress().init();
+    </script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
