@@ -6,14 +6,25 @@
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <title>Front End Ops - Ian Feather</title>
       
-      <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-      <meta name="author" content="Bartek Szopka" />
+      <meta name="description" content="A talk given at FrontEndLondon - built using impress.js" />
+      <meta name="author" content="Ian Feather" />
 
       <link href="css/impress-demo.css" rel="stylesheet" />
       <link href="css/style.css" rel="stylesheet" />
       
       <link rel="shortcut icon" href="favicon.png" />
       <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+      <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18556757-8']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
   </head>
 
   <body class="impress-not-supported">
@@ -23,23 +34,23 @@
         <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
     </div>
 
+    <div class="helpful-message is-active">
+      <p>Press i at any point to get more information / helpful links.</p>
+    </div>
+
     <div id="impress">
 
-      <div id="t0-begin" class="step slide v-centered js-substeps" data-x="0" data-y="6500">
+      <div id="t0-begin" class="step slide v-centered js-substeps title-slide" data-x="0" data-y="6500">
         <div class="slide__content">
-          <h1 class="slide__title substep is-active js-substep">Front End Ops</h1>
-          <p class="substep js-substep">Understand the operational side of your application, so you can understand where your code runs.</p>
-          <ul class="substep js-substep">
-            <li>This isn&apos;t about Grunt, Bower, Yeoman&hellip;</li>
-            <li>It&apos;s a collection of concepts, rather than tools.</li>
-          </ul>
+          <h1 class="slide__title">Front End Ops</h1>
+          <a class="author-link" href="http://www.twitter.com/ianfeather">@ianfeather</a>
+          <a href="http://www.lonelyplanet.com" class="lp-logo">Lonely Planet</a>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
-            <p>It was talking to <a href="https://twitter.com/OliverJAsh">Oliver Ash</a> that made me decide to do this talk. We discussed this Catch 22 situation around a lot of these topics: where it was very hard to actually learn them without being exposed to them (usually in large organisations) - and equally difficuly to get the role where you would be exposed to them, without the skills.</p>
-
-            <p>Importantly for me, the operational side of your application is still part of the product. If we want to build the best product we can, we need to be responsible for putting your own code into production and understand how it runs there.</p>
-
+            <p>This talk isn't about grunt, bower or yeoman, it focuses more on the concepts and theory behind devOps and specifically how it can relate to the Front End.</p>
+            <p>There is this Catch 22 situation around a lot of these topics: where it&rsquo;s very hard to actually learn them without being exposed to them (usually in large organisations) - and equally difficuly to get the role where you would be exposed to them, without the skills.</p>
+            <p>Importantly for me, the operational side of your application is still part of the product. If we want to build the best product we can, we need to be responsible for putting our own code into production and understand how it runs there.</p>
           </div>
         </div>
       </div>
@@ -52,9 +63,9 @@
 
         <div class="user-panel">
           <div class="user-panel__inner">
-            <p>Front end developers are probably the worst culprits of throwing code over the wall. The mentality of, &ldquo;I pushed it, now it&apos;s an Ops problem&rdquo; is becoming a dated paradigm, one which has so many drawbacks.</p>
+            <p>Front end developers are probably the worst culprits of throwing code over the wall. The mentality of, &ldquo;I pushed it, now it&rsquo;s an Ops problem&rdquo; is becoming a dated paradigm, one which has so many drawbacks.</p>
             <p>As front end developers we should be levelling up and taking ownership of our code working correctly locally and in production, as well as understanding all the variables that sit between our code and the user.</p>
-            <p>Plus you don&apos;t have to wait around for the ops guy any more&hellip; ;)</p>
+            <p>Plus you don&rsquo;t have to wait around for the ops guy any more&hellip; ;)</p>
           </div>
         </div>
       </div>
@@ -63,14 +74,15 @@
       <div id="t0-key-concepts" class="step slide is-overview" data-x="0" data-y="3500">
         <div class="slide__content">
           <h1 class="slide__title substep is-active js-substep">Key Concepts</h1>
+          <div class="substep js-substep">
+            <blockquote><strong>&ldquo;The metric by which a front-end operations engineer would be judged is <em>speed</em>.</strong>&rdquo; - Alex Sexton, Smashing Magazine</blockquote>
 
-          <blockquote class="substep js-substep"><strong>&ldquo;The metric by which a front-end operations engineer would be judged is <em>speed</em>.</strong>&rdquo; - Alex Sexton, Smashing Magazine</blockquote>
-
-          <ul class="substep js-substep">
-            <li class="slide__item">Release (the best) code as fast as possible.</li>
-            <li class="slide__item">Begin the User Experience as fast as possible.</li>
-            <li class="slide__item">Enable fast feedback.</li>
-          </ul>
+            <ul>
+              <li class="slide__item">Release (the best) code as fast as possible.</li>
+              <li class="slide__item">Begin the User Experience as fast as possible.</li>
+              <li class="slide__item">Enable fast feedback.</li>
+            </ul>
+          </div>
 
         </div>
         <div class="user-panel">
@@ -79,7 +91,7 @@
 
             <p>By enabling the three quick processes and constantly finding ways to reduce the latency of the feeback loop, we are creating a better product.</p>
 
-            <p>And it&apos;s not complicated to understand. There are two key principles which will work together to create a successful product lifecycle:</p>
+            <p>And it&rsquo;s not complicated to understand. There are two key principles which will work together to create a successful product lifecycle:</p>
             <ul>
               <li class="slide__item">Offload as much as possibe</li>
               <li class="slide__item">Tighten the feedback loop</li>
@@ -108,12 +120,12 @@
 
       <div id="t1-author-code" class="step slide hidden--overview-1" data-x="0" data-y="2100" data-scale="1.5">
         <div class="slide__content">
-          <h1 class="slide__title substep is-active js-substep">Authoring code</h1>
+          <h1 class="slide__title substep is-active js-substep">Safe Code Delivery</h1>
           <div class="substep js-substep">
             <ul>
               <li>Create systems to protect the production environment.</li>
               <li>Offload risk away from any individual developer.</li>
-              <li>Alert on bugs as early as possible.</li>
+              <li>Give feedback as early as possible.</li>
             </ul>
           </div>
         </div>
@@ -134,15 +146,15 @@
       
       <div id="t1-commit" class="step slide hidden--overview-1" data-x="1250" data-y="2100">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Pre-Commit</h1>
+          <h1 class="slide__title is-active substep js-substep">Save &amp; Pre-Commit</h1>
           <div class="substep js-substep">
-            <p>An opportunity to run small, fast, composable tasks:</p>
+            <p>Our first opportunities to run small, fast, composable tasks:</p>
+            <ul>
+              <li>Remove trailing whitespace.</li>
+              <li>Ensure styleguide compliance.</li>
+              <li>Remove debuggers, local dependency references etc.</li>
+            </ul>
           </div>
-          <ul class="substep js-substep">
-            <li>Remove console.logs, debuggers, local dependency references.</li>
-            <li>Ensure styleguide compliance.</li>
-            <li>Remove trailing whitespace.</li>
-          </ul>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
@@ -167,12 +179,14 @@
       <div id="t1-push" class="step slide hidden--overview-1" data-x="1950" data-y="1300">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Pre-Push</h1>
-          <p class="substep js-substep">An opportunity to run slightly longer tasks:</p>
-          <ul class="substep js-substep">
-            <li>Unit tests.</li>
-            <li>Visual Regression tests.</li>
-            <li>Code coverage, quality and complexity analysis.</li>
-          </ul>
+          <div class="substep js-substep">
+            <p>An opportunity to run slightly longer tasks:</p>
+            <ul>
+              <li>Unit tests.</li>
+              <li>Visual Regression tests.</li>
+              <li>Code coverage, quality and complexity analysis.</li>
+            </ul>
+          </div>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
@@ -208,13 +222,15 @@
 
       <div id="t1-merge" class="step slide hidden--overview-1" data-x="2650" data-y="500">
         <div class="slide__content">
-          <h1 class="slide__title is-active substep js-substep">Pre-Merge</h1>
-          <p class="substep js-substep">Our opportunity to have our code reviewed by a peer.</p>
-          <ul class="substep js-substep">
-            <li>Thoroughness is more important here than speed.</li>
-            <li>An opportunity to share knowledge.</li>
-            <li>Not a personal critique.</li>
-          </ul>
+          <h1 class="slide__title is-active substep js-substep">Code Review</h1>
+          <div class="substep js-substep">
+            <p>Our last opportunity to sanity check before merging.</p>
+            <ul>
+              <li>Thoroughness is more important here than speed.</li>
+              <li>An opportunity to share knowledge.</li>
+              <li>Not a personal critique.</li>
+            </ul>
+          </div>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
@@ -237,15 +253,13 @@
       <div id="t1-ci" class="step slide hidden--overview-1" data-x="3350" data-y="-300" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Continuous Integration</h1>
-          <p class="substep js-substep">CI can seem complex but is actually very simple:</p>
-          <ul class="substep js-substep">
-            <li>A near-production environment in a centralised location.</li>
-            <li>A hook to trigger tasks.</li>
-            <li>A task runner that returns 0 or 1.</li>
-          </ul>
           <div class="substep js-substep">
-            <h2 class="slide__subtitle">So, what&apos;s the difference between:</h2>
-            <p>Continous Integration, Continuous Deployment, Continuous Delivery, Continuous Experimentation&hellip;?</p>
+            <p>CI can seem complex but is actually very simple:</p>
+            <ul>
+              <li>A near-production environment in a centralised location.</li>
+              <li>A hook to trigger tasks.</li>
+              <li>A series of task runners that return 0 or 1.</li>
+            </ul>
           </div>
         </div>
         <div class="user-panel">
@@ -275,16 +289,19 @@
       <div id="t1-deploy" class="step slide hidden--overview-1" data-x="4050" data-y="-1100">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Deployment</h1>
-          <p class="substep js-substep">Moving files to a production environment in a consistent and automated manner.</p>
-          <p class="substep js-substep">Triggered on a successful Continuous Integration result.</p>
-          <ul class="substep js-substep">
-            <li>Choose your deployment strategy.</li>
-            <li>Deploy assets to a different server?</li>
-            <li>Don&apos;t forget to flush any edge caches that require it.</li>
-          </ul>
+          <div class="substep js-substep">
+            <p>Moving files to a production environment in a consistent and automated manner.</p>
+            <ul>
+              <li>Continuous Deployment, Delivery or Experimentation&hellip;?</li>
+              <li>Triggered on a successful Continuous Integration result.</li>
+              <li>Choose your deployment method &amp; strategy.</li>
+              <li>Execute downstream jobs.</li>
+            </ul>
+          </div>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
+            <p>Deployment can be as complicated as you want it to be. It's just about moving code to a different environment. There are products like beanstalk which can get you up and running quickly and integrates well.</p>
             <p>We package and deploy our application using <a href="http://www.capistranorb.com/">Capistrano</a>. We push all our assets to <a href="https://aws.amazon.com/s3/">S3</a> and then cache them at the edge using <a href="http://www.fastly.com/">Fastly</a>.</p>
             <h4>Links</h4>
             <a href="http://css-tricks.com/deployment/">A <em>great</em> round up of deployment strategies from Chris Coyier</a>
@@ -308,18 +325,16 @@
           <div class="substep js-substep">
             <h2 class="slide__subtitle">You should know:</h2>
             <ul>
+              <li>What lies on the critical path to the User Experience.</li>
               <li>Which parts of the application to optimise.</li>
-              <li>How to protect the application - a broken UX is the slowest.</li>
+              <li>How to protect the application.</li>
             </ul>
           </div>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">What separates the user and the experience:</h2>
-            <ul>
-              <li>DNS lookups.</li>
-              <li>A <em>lot</em> of Network Variability.</li>
-              <li>The speed &amp; stability of your application.</li>
-              <li>Assets on the Critical Path</li>
-            </ul>
+        </div>
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p>You should have an understanding of the full stack, but that doesn't mean you need to be an expert at all of it.</p>
+            <p>If you have this high level understanding it gives you the ability to pick out which parts are the bottlenecks, weak points for your particular application.</p>
           </div>
         </div>
       </div>
@@ -328,19 +343,20 @@
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Application Level</h1>
           <div class="substep js-substep">
-            <h2 class="slide__subtitle">What can we cache at this tier?</h2>
+            <h2 class="slide__subtitle"></h2>
             <ul>
-              <li>Database queries?</li>
-              <li>Page partials?</li>
-              <li>The entire page?</li>
+              <li>Where&rsquo;s our origin server?</li>
+              <li>What can we cache at this tier?</li>
+              <li>What can we monitor?</li>
             </ul>
           </div>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">What can we monitor?</h2>
+        </div>
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p>Up until 2 years ago we operated out of Australia. Not the best place for latency. <strong>Go where your users are</strong>.</p>
+            <h4>Links</h4>
             <ul>
-              <li>Database query timings.</li>
-              <li>Function heat and timings.</li>
-              <li>View render timings.</li>
+              <li>Application monitoring: <a href="https://newrelic.com/">New Relic</a>, <a href="http://www.nagios.com/solutions/application-monitoring">Nagios</a></li>
             </ul>
           </div>
         </div>
@@ -351,15 +367,22 @@
           <h1 class="slide__title is-active substep js-substep">Load Balancer or Proxy</h1>
           <div class="substep js-substep">
             <h2 class="slide__subtitle">Not always necessary, but an opportunity to:</h2>
-            <li>Protect struggling servers and distribute load.</li>
-            <li>Report to an auto-scaling mechanism.</li>
-            <li>Run Server Side AB Tests.</li>
-            <li>Handle security threats.</li>
+            <ul>
+              <li>Protect your application.</li>
+              <li>Split traffic.</li>
+              <li>Monitor latency.</li>
+            </ul>
           </div>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">And Monitor unhealthy servers.</h2>
-            <p>Monitor and report on load Balancer latency.</p>
-            <p>Useful for alerting because it cuts out variability of the network.</p>
+        </div>
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p>By protecting your application we talk about blocking ddos attacks, bots etc. It's important to cut this off before your application. A broken app is the slowest kind.</p>
+            <p>If we split traffic we can run server side AB tests, carry out rolling deploys, split our application into small parts etc.</p>
+            <p>Load balancer latency is a good metric to alert on because it cuts out some of the variability of the network layer.</p>
+            <h4>Links</h4>
+            <ul>
+              <li>Products: <a href="http://nginx.com/products/">Nginx</a>, <a href="https://aws.amazon.com/elasticloadbalancing/">Amazon Elastic Load Balancer</a>, <a href="https://www.f5.com/">f5</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -368,19 +391,27 @@
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">CDN</h1>
           <div class="substep js-substep">
-            <h2 class="slide__subtitle">Store static files on edge nodes closer to the user.</h2>
+            <h2 class="slide__subtitle">Work out what you can cache.</h2>
             <ul>
-              <li>The entire page.*</li>
+              <li>The entire page.</li>
               <li>Static Assets.</li>
               <li>The DNS lookup.</li>
             </ul>
-            <p>* Caveats with page caching: Cookies, Auth, Localisation.</p>
-          </div>
-          <div class="substep js-substep">
             <h2 class="slide__subtitle">Uh oh, now everything is cached&hellip;</h2>
             <ul>
-              <li>Have cache busting mechanisms.</li>
+              <li>Cookies, Authentication, Localisation.</li>
               <li>Expose what is cached, and where, to the team.</li>
+              <li>Have cache busting mechanisms.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p>How static is your site? Are there whole pages you can store at the edge?</p>
+            <p>Be aware that caching something away from your application creates new headaches.</p>
+            <h4>Links</h4>
+            <ul>
+              <li>CDN Options: <a href="https://www.cloudflare.com/features-cdn">CloudFlare (free version too)</a>, <a href="http://www.fastly.com/">Fastly</a>, <a href="https://aws.amazon.com/cloudfront/">CloudFront</a>,  <a href="http://www.akamai.com/html/solutions/aura_managed_cdn.html">Akamai</a></li>
             </ul>
           </div>
         </div>
@@ -391,21 +422,29 @@
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Browser</h1>
           <div class="substep js-substep">
-            <h2 class="slide__subtitle">Fetch and store static assets:</h2>
+            <h2 class="slide__subtitle">Minimise the critical path:</h2>
             <ul>
-              <li>The benefits of a Cookieless domain.</li>
-              <li>Cached indefinitely.</li>
-              <li>Versioned e.g. application-e8f29d9aae0aa79.css</li>
-              <li>Browser cache, LocalStorage&hellip;</li>
-              <li>Be lazy.</li>
+              <li>Uniquely identify your assets e.g. application-e8f29d9.css</li>
+              <li>Tweak asset config to increase cache hit rate.</li>
+              <li>Serve everything from the edge.</li>
             </ul>
-          </div>
-          <div class="substep js-substep">
             <h2 class="slide__subtitle">And kick off client-side monitoring:</h2>
             <ul>
               <li>RUM Timings.</li>
               <li>Javascript Errors.</li>
               <li>Custom user events.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p></p>
+            <h4>Links</h4>
+            <ul>
+              <li><a href="http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/">Deciphering the critical path</a></li>
+              <li>Asset versioning: <a href="https://github.com/hollandben/grunt-cache-bust">grunt-cache-bust</a>, <a href="http://guides.rubyonrails.org/asset_pipeline.html#in-production">Rails Asset Digests</a></li>
+              <li>RUM: <a href="http://www.soasta.com/products/mpulse/">Soasta mPulse</a>, <a href="https://newrelic.com/real-user-monitoring">New Relic</a>, <a href="https://support.google.com/analytics/answer/1205784?hl=en-GB">Google Analytics</a></li>
+              <li>Write your own custom event logger, or use ours, they're simple. We wrote <a href="http://www.github.com/lonelyplanet/flamsteed">Flamsteed</a>.</li>
             </ul>
           </div>
         </div>
@@ -428,16 +467,22 @@
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Collect Metrics</h1>
           <ul class="substep js-substep">
-            <li>Measure everything - expose metrics that matter.</li>
-            <li>Collect metrics using tools like statsD, Logstash or even a 1x1.</li>
-            <li>Visualise them - Graphite, DataDog, Kibana.</li>
-            <li>Expose them to your team!</li>
+            <li>How do you know what to measure?</li>
+            <li>Collect using tools like statsD, Logstash or even a 1x1.</li>
+            <li>Expose them to your team.</li>
+            <li>Figure out what they mean.</li>
           </ul>
-          <div class="substep js-substep">
-            <h2 class="slide__subtitle">And the hard part:</h2>
+        </div>
+        <div class="user-panel">
+          <div class="user-panel__inner">
+            <p>Knowing what to measure is really hard, and very specific to your own product/application. What you measure will evolve as your app evolves.</p>
+            <p>Find creative ways of exposing them to your team.</p>
+            <h4>Links</h4>
             <ul>
-              <li>Figure out what they mean.</li>
-              <li>Alert on them.</li>
+              <li><a href="http://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/">Practical Guide to StatsD/Graphite Monitoring</a></li>
+              <li><a href="http://codeascraft.com/2011/02/15/measure-anything-measure-everything/">Measure Anything, Measure Everything - Etsy</a></li>
+              <li><a href="http://michael.bouvy.net/blog/en/2013/11/19/collect-visualize-your-logs-logstash-elasticsearch-redis-kibana/">Collect &amp; visualize your logs with Logstash, Elasticsearch &amp; Redis</a> </li>
+              <li>Products: <a href="http://www.datadoghq.com/">DataDog (StatsD as a service)</a>, <a href="http://logstash.net/">logstash</a>, <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a></li>
             </ul>
           </div>
         </div>
@@ -458,13 +503,15 @@
       <div id="t3-feedback" class="step slide" data-x="-1300" data-y="2100" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Use the Feedback</h1>
-          <p class="substep js-substep">It's pointless if ignored. Use it to:</p>
-          <ul class="substep js-substep">
-            <li>Decide on the next features/bug-fix.</li>
-            <li>Improve your feedback loop.</li>
-            <li>Remove HIPPOs from the equation.</li>
-            <li>Make a better product.</li>
-          </ul>
+          <div class="substep js-substep">
+            <ul>
+              <li>To decide on the next features/bug-fixes.</li>
+              <li>To improve your feedback loop.</li>
+              <li>To remove HIPPOs* from the equation.</li>
+              <li>Tom make the product better.</li>
+            </ul>
+            <p>* Highest paid person's opinion</p>
+          </div>
         </div>
       </div>
 
@@ -474,7 +521,7 @@
         <div class="slide__content">
           <h1 class="slide__title">Thanks!</h1>
           <p>Any questions?</p>
-          <p>Or ask away on twitter - <a href="http://www.twitter.com/ianfeather"</a>@ianfeather</a></p>
+          <p>Or ask away on twitter - <a href="http://www.twitter.com/ianfeather">@ianfeather</a></p>
         </div>
       </div>
 
