@@ -6,15 +6,25 @@
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <title>Front End Ops - Ian Feather</title>
       
-      <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-      <meta name="author" content="Bartek Szopka" />
+      <meta name="description" content="A talk given at FrontEndLondon - built using impress.js" />
+      <meta name="author" content="Ian Feather" />
 
       <link href="css/impress-demo.css" rel="stylesheet" />
       <link href="css/style.css" rel="stylesheet" />
       
       <link rel="shortcut icon" href="favicon.png" />
       <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+      <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18556757-8']);
+          _gaq.push(['_trackPageview']);
 
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
   </head>
 
   <body class="impress-not-supported">
@@ -24,16 +34,23 @@
         <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
     </div>
 
+    <div class="helpful-message is-active">
+      <p>Press i at any point to get more information / helpful links.</p>
+    </div>
+
     <div id="impress">
 
-      <div id="t0-begin" class="step slide v-centered js-substeps" data-x="0" data-y="6500">
+      <div id="t0-begin" class="step slide v-centered js-substeps title-slide" data-x="0" data-y="6500">
         <div class="slide__content">
-          <h1 class="slide__title substep is-active js-substep">Front End Ops</h1>
+          <h1 class="slide__title">Front End Ops</h1>
+          <a class="author-link" href="http://www.twitter.com/ianfeather">@ianfeather</a>
+          <a href="http://www.lonelyplanet.com" class="lp-logo">Lonely Planet</a>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
-            <p>It was talking to <a href="https://twitter.com/OliverJAsh">Oliver Ash</a> that made me decide to do this talk. We discussed this Catch 22 situation around a lot of these topics: where it was very hard to actually learn them without being exposed to them (usually in large organisations) - and equally difficuly to get the role where you would be exposed to them, without the skills.</p>
-            <p>Importantly for me, the operational side of your application is still part of the product. If we want to build the best product we can, we need to be responsible for putting your own code into production and understand how it runs there.</p>
+            <p>This talk isn't about grunt, bower or yeoman, it focuses more on the concepts and theory behind devOps and specifically how it can relate to the Front End.</p>
+            <p>There is this Catch 22 situation around a lot of these topics: where it&rsquo;s very hard to actually learn them without being exposed to them (usually in large organisations) - and equally difficuly to get the role where you would be exposed to them, without the skills.</p>
+            <p>Importantly for me, the operational side of your application is still part of the product. If we want to build the best product we can, we need to be responsible for putting our own code into production and understand how it runs there.</p>
           </div>
         </div>
       </div>
@@ -209,6 +226,7 @@
           <div class="substep js-substep">
             <p>Our last opportunity to sanity check before merging.</p>
             <ul>
+              <li>Thoroughness is more important here than speed.</li>
               <li>An opportunity to share knowledge.</li>
               <li>Not a personal critique.</li>
             </ul>
@@ -235,11 +253,14 @@
       <div id="t1-ci" class="step slide hidden--overview-1" data-x="3350" data-y="-300" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Continuous Integration</h1>
-          <ul class="substep js-substep">
-            <li>A near-production environment in a centralised location.</li>
-            <li>A hook to trigger tasks.</li>
-            <li>A series of task runners that return 0 or 1.</li>
-          </ul>
+          <div class="substep js-substep">
+            <p>CI can seem complex but is actually very simple:</p>
+            <ul>
+              <li>A near-production environment in a centralised location.</li>
+              <li>A hook to trigger tasks.</li>
+              <li>A series of task runners that return 0 or 1.</li>
+            </ul>
+          </div>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
@@ -268,14 +289,19 @@
       <div id="t1-deploy" class="step slide hidden--overview-1" data-x="4050" data-y="-1100">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Deployment</h1>
-          <ul class="substep js-substep">
-            <li>Continuous Deployment, Delivery or Experimentation&hellip;?</li>
-            <li>Choose your deployment method &amp; strategy.</li>
-            <li>Execute downstream jobs.</li>
-          </ul>
+          <div class="substep js-substep">
+            <p>Moving files to a production environment in a consistent and automated manner.</p>
+            <ul>
+              <li>Continuous Deployment, Delivery or Experimentation&hellip;?</li>
+              <li>Triggered on a successful Continuous Integration result.</li>
+              <li>Choose your deployment method &amp; strategy.</li>
+              <li>Execute downstream jobs.</li>
+            </ul>
+          </div>
         </div>
         <div class="user-panel">
           <div class="user-panel__inner">
+            <p>Deployment can be as complicated as you want it to be. It's just about moving code to a different environment. There are products like beanstalk which can get you up and running quickly and integrates well.</p>
             <p>We package and deploy our application using <a href="http://www.capistranorb.com/">Capistrano</a>. We push all our assets to <a href="https://aws.amazon.com/s3/">S3</a> and then cache them at the edge using <a href="http://www.fastly.com/">Fastly</a>.</p>
             <h4>Links</h4>
             <a href="http://css-tricks.com/deployment/">A <em>great</em> round up of deployment strategies from Chris Coyier</a>
@@ -416,11 +442,14 @@
       <div id="t3-feedback" class="step slide" data-x="-1300" data-y="2100" data-scale="1">
         <div class="slide__content">
           <h1 class="slide__title is-active substep js-substep">Use the Feedback</h1>
-          <ul class="substep js-substep">
-            <li>To decide on the next features/bug-fixes.</li>
-            <li>To improve your feedback loop.</li>
-            <li>To remove HIPPOs from the equation.</li>
-          </ul>
+          <div class="substep js-substep">
+            <ul>
+              <li>To decide on the next features/bug-fixes.</li>
+              <li>To improve your feedback loop.</li>
+              <li>To remove HIPPOs* from the equation.</li>
+            </ul>
+            <p>* Highest paid person's opinion</p>
+          </div>
         </div>
       </div>
 
@@ -430,7 +459,7 @@
         <div class="slide__content">
           <h1 class="slide__title">Thanks!</h1>
           <p>Any questions?</p>
-          <p>Or ask away on twitter - <a href="http://www.twitter.com/ianfeather"</a>@ianfeather</a></p>
+          <p>Or ask away on twitter - <a href="http://www.twitter.com/ianfeather">@ianfeather</a></p>
         </div>
       </div>
 
