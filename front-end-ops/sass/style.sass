@@ -122,6 +122,7 @@ p, ul
 .substep.is-active ~ .substep
   opacity: 0
 
+
 .slide__title
   font-size: 80px
   color: #206FAC
@@ -314,3 +315,22 @@ body[class*="t1-overview-3"] #t0-author-code,
 body[class*="author-code"] #t0-author-code,
 body[class*="thanks"] #t4-thanks
   opacity: 1
+
+.impress-not-supported
+  .substep, #t4-thanks
+    opacity: 1!important
+
+  .slide__title.is-active
+    height: auto
+    -webkit-transform: translateY(0%)
+    -moz-transform: translateY(0%)
+    -ms-transform: translateY(0%)
+    -o-transform: translateY(0%)
+    transform: translateY(0%)
+    margin-top: 0
+  
+  .slide--important,
+  .slide--server,
+  #t0-editor,
+  #t0-overview-2
+    display: none!important

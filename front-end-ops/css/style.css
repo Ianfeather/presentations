@@ -905,3 +905,19 @@ body[class*="t1-overview-3"] #t0-author-code,
 body[class*="author-code"] #t0-author-code,
 body[class*="thanks"] #t4-thanks {
   opacity: 1; }
+
+.impress-not-supported .substep, .impress-not-supported #t4-thanks {
+  opacity: 1 !important; }
+.impress-not-supported .slide__title.is-active {
+  height: auto;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+  margin-top: 0; }
+.impress-not-supported .slide--important,
+.impress-not-supported .slide--server,
+.impress-not-supported #t0-editor,
+.impress-not-supported #t0-overview-2 {
+  display: none !important; }
